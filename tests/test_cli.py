@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from typer.testing import CliRunner
 
 from schema_sentinel.cli import app
+from schema_sentinel.contract import build_contract, write_contract
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 runner = CliRunner()
@@ -78,3 +80,47 @@ def test_cli_exits_two_for_critical_drift(tmp_path: Path) -> None:
     assert (tmp_path / "outputs" / "summary.md").exists()
     assert (tmp_path / "outputs" / "report.html").exists()
     assert (tmp_path / "outputs" / "report.json").exists()
+
+
+def test_contract_init_command_writes_contract_file(tmp_path: Path) -> None:
+    baseline = tmp_path / "baseline.csv"
+    baseline.write_text("id,plan\n1,free\n2,pro\n", encoding="utf-8")
+
+    result = runner.invoke(
+        app,
+        ["contract", "init", str(baseline), "--out", str(tmp_path / "schema-contract.json")],
+    )
+
+    assert result.exit_code == 0
+    assert (tmp_path / "schema-contract.json").exists()
+    payload = json.loads((tmp_path / "schema-contract.json").read_text(encoding="utf-8"))
+    assert payload["columns"]["plan"]["required"] is True
+
+
+def test_validate_command_writes_reports_and_step_summary(tmp_path: Path) -> None:
+    baseline = tmp_path / "baseline.csv"
+    baseline.write_text("id,plan,score\n1,free,10\n2,pro,20\n", encoding="utf-8")
+    contract_path = tmp_path / "schema-contract.json"
+    write_contract(build_contract(baseline), contract_path)
+    step_summary = tmp_path / "step-summary.md"
+
+    result = runner.invoke(
+        app,
+        [
+            "validate",
+            str(baseline),
+            "--contract",
+            str(contract_path),
+            "--output-dir",
+            str(tmp_path / "outputs"),
+        ],
+        env={"GITHUB_STEP_SUMMARY": str(step_summary)},
+    )
+
+    assert result.exit_code == 0
+    assert "Validating" in result.output
+    assert (tmp_path / "outputs" / "summary.md").exists()
+    assert (tmp_path / "outputs" / "report.html").exists()
+    assert (tmp_path / "outputs" / "report.json").exists()
+    assert step_summary.exists()
+    assert "Mode: `validate`" in step_summary.read_text(encoding="utf-8")

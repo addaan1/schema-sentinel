@@ -33,3 +33,23 @@ jobs:
       - name: Check distribution metadata
         run: |
           twine check dist/*
+
+  validate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+      - name: Validate committed schema contract
+        run: |
+          python -m schema_sentinel validate examples/old.csv --contract schema-contract.json --output-dir contract-artifacts --format all
+      - name: Upload contract validation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: contract-validation-artifacts
+          path: contract-artifacts/
