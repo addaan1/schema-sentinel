@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schema-sentinel"
+version = "0.2.0"
+description = "Catch dataset drift before it breaks your pipeline."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Schema Sentinel Contributors" }
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "pandas>=2.2,<3.0",
+  "typer>=0.12,<1.0",
+  "rich>=13.7,<14.0",
+  "jinja2>=3.1,<4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/addaan1/schema-sentinel"
+Repository = "https://github.com/addaan1/schema-sentinel"
+Issues = "https://github.com/addaan1/schema-sentinel/issues"
+Releases = "https://github.com/addaan1/schema-sentinel/releases"
+Documentation = "https://github.com/addaan1/schema-sentinel#readme"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2,<9.0",
+  "ruff>=0.6,<1.0",
+]
+
+[project.scripts]
+schema-sentinel = "schema_sentinel.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["schema_sentinel*"]
+exclude = ["assets*", "examples*", "tests*"]
+
+[tool.setuptools.package-data]
+schema_sentinel = ["templates/*.j2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

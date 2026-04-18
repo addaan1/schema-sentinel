@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Schema Sentinel Report</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: rgba(255, 255, 255, 0.92);
+      --panel-strong: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: rgba(15, 23, 42, 0.09);
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      --blue: #2563eb;
+      --blue-soft: rgba(37, 99, 235, 0.12);
+      --cyan: #0891b2;
+      --green: #16a34a;
+      --amber: #d97706;
+      --orange: #ea580c;
+      --red: #dc2626;
+      --slate: #64748b;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(8, 145, 178, 0.12), transparent 22%),
+        linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
+      z-index: -1;
+    }
+    a { color: inherit; }
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+    }
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+      z-index: 999;
+      background: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.88));
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -100px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.18), transparent 70%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 14px 0 10px;
+      font-size: clamp(2.3rem, 4vw, 4.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+    }
+    .hero-copy {
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin: 0 0 22px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .risk-card {
+      border-radius: 24px;
+      padding: 22px;
+      background: linear-gradient(180deg, rgba(15,23,42,0.98), rgba(30,41,59,0.98));
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 100%;
+    }
+    .risk-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.7);
+    }
+    .risk-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .risk-badge[data-risk="safe"] { color: #86efac; }
+    .risk-badge[data-risk="low"] { color: #93c5fd; }
+    .risk-badge[data-risk="medium"] { color: #fbbf24; }
+    .risk-badge[data-risk="high"] { color: #fdba74; }
+    .risk-badge[data-risk="critical"] { color: #fca5a5; }
+    .score {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      line-height: 0.9;
+      margin: 0;
+    }
+    .score small {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      color: rgba(255,255,255,0.75);
+    }
+    .section {
+      margin-top: 22px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
+      overflow: hidden;
+    }
+    .section-header {
+      padding: 22px 24px 0;
+    }
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+    .section-header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 72ch;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+      padding: 22px 24px 24px;
+    }
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--panel-strong);
+      padding: 18px;
+      min-height: 118px;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: auto -22px -28px auto;
+      width: 90px;
+      height: 90px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%);
+    }
+    .card-label {
+      display: block;
+      color: var(--slate);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .card-value {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .card-note {
+      margin-top: 8px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 16px;
+      padding: 0 24px 24px;
+    }
+    .panel {
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--panel-strong);
+      padding: 18px;
+    }
+    .panel h3 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .findings {
+      display: grid;
+      gap: 12px;
+    }
+    details.finding {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      overflow: clip;
+    }
+    details.finding summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px 14px;
+      display: grid;
+      grid-template-columns: auto auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+    details.finding summary::-webkit-details-marker { display: none; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .badge[data-risk="critical"] { background: rgba(220, 38, 38, 0.12); color: var(--red); }
+    .badge[data-risk="high"] { background: rgba(234, 88, 12, 0.12); color: var(--orange); }
+    .badge[data-risk="medium"] { background: rgba(217, 119, 6, 0.12); color: var(--amber); }
+    .badge[data-risk="low"] { background: rgba(8, 145, 178, 0.12); color: var(--cyan); }
+    .finding-title {
+      font-weight: 700;
+    }
+    .finding-columns {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .finding-body {
+      padding: 0 16px 16px;
+      color: var(--muted);
+    }
+    .finding-body p {
+      margin: 0 0 10px;
+    }
+    .rename-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0 24px 24px;
+    }
+    .rename-card {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      background: linear-gradient(180deg, #fff, #f8fbff);
+    }
+    .rename-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .rename-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .rename-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blue);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .rename-reason {
+      color: var(--muted);
+      margin: 0;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-top: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: rgba(248, 250, 252, 0.96);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate);
+      z-index: 1;
+    }
+    tbody tr:hover {
+      background: rgba(37, 99, 235, 0.03);
+    }
+    .muted { color: var(--muted); }
+    .recommendations {
+      display: grid;
+      gap: 10px;
+      padding: 24px;
+    }
+    .recommendation {
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      padding: 14px 16px;
+      color: var(--text);
+    }
+    .footer {
+      padding: 18px 24px 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .mini-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff;
+    }
+    .mini-card span {
+      display: block;
+      color: var(--slate);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .mini-card strong {
+      font-size: 1.2rem;
+    }
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blue);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    @media (max-width: 1100px) {
+      .hero,
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+      .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .mini-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .rename-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 1180px);
+        padding-top: 12px;
+      }
+      .hero,
+      .section {
+        border-radius: 24px;
+      }
+      .hero {
+        padding: 18px;
+      }
+      .cards {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+      .grid-two,
+      .recommendations,
+      .rename-grid {
+        padding: 0 18px 18px;
+      }
+      .section-header {
+        padding: 18px 18px 0;
+      }
+      .mini-grid,
+      .two-col-list {
+        grid-template-columns: 1fr;
+      }
+      details.finding summary {
+        grid-template-columns: auto 1fr;
+      }
+      .finding-columns {
+        grid-column: 1 / -1;
+      }
+      .rename-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="page">
+    <section class="hero" aria-labelledby="report-title">
+      <div>
+        <span class="eyebrow">Schema Sentinel Report</span>
+        <h1 id="report-title">Catch drift before the pipeline breaks.</h1>
+        <p class="hero-copy">
+          Comparing <strong>{{ old_path }}</strong> to <strong>{{ new_path }}</strong>. The report
+          highlights structural changes first, then drills into null-rate shifts, rename suggestions,
+          category drift, and numeric movement that could affect downstream consumers.
+        </p>
+        <div class="hero-meta">
+          <span class="pill">Generated {{ generated_at }}</span>
+          <span class="pill">Rows {{ row_change }}</span>
+          <span class="pill">Columns {{ column_change }}</span>
+          <span class="pill">Added {{ counts.added }}</span>
+          <span class="pill">Removed {{ counts.removed }}</span>
+          <span class="pill">Renames {{ counts.renamed }}</span>
+        </div>
+      </div>
+      <aside class="risk-card">
+        <div>
+          <div class="risk-label">Overall risk</div>
+          <div class="risk-badge" data-risk="{{ overall_risk_lower }}">{{ overall_risk }}</div>
+        </div>
+        <div>
+          <p class="score">{{ stability_score }}<small>Stability score / 100</small></p>
+          <p class="muted" style="margin: 0;">
+            {{ summary.total }} findings across {{ shared_columns | length }} shared columns.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" aria-labelledby="summary-heading">
+      <div class="section-header">
+        <h2 id="summary-heading">Summary at a glance</h2>
+        <p>Small, dense cards make it easy to scan the result in seconds and still preserve detail.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><span class="card-label">Critical</span><div class="card-value">{{ summary.critical }}</div><div class="card-note">Requires immediate attention</div></div>
+        <div class="card"><span class="card-label">High</span><div class="card-value">{{ summary.high }}</div><div class="card-note">Likely breaking changes</div></div>
+        <div class="card"><span class="card-label">Medium</span><div class="card-value">{{ summary.medium }}</div><div class="card-note">Review before release</div></div>
+        <div class="card"><span class="card-label">Low</span><div class="card-value">{{ summary.low }}</div><div class="card-note">Informational drift</div></div>
+        <div class="card"><span class="card-label">Added columns</span><div class="card-value">{{ counts.added }}</div><div class="card-note">New schema fields</div></div>
+        <div class="card"><span class="card-label">Removed columns</span><div class="card-value">{{ counts.removed }}</div><div class="card-note">Missing schema fields</div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="health-heading">
+      <div class="section-header">
+        <h2 id="health-heading">Health snapshot</h2>
+        <p>A compact status view that pairs the core counts with a quick look at the dataset shape.</p>
+      </div>
+      <div class="grid-two">
+        <div class="panel">
+          <h3>Dataset shape</h3>
+          <div class="mini-grid">
+            <div class="mini-card"><span>Rows</span><strong>{{ row_change }}</strong></div>
+            <div class="mini-card"><span>Columns</span><strong>{{ column_change }}</strong></div>
+            <div class="mini-card"><span>Shared</span><strong>{{ counts.shared }}</strong></div>
+            <div class="mini-card"><span>Findings</span><strong>{{ summary.total }}</strong></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Recommendations preview</h3>
+          <div class="chips">
+            {% for recommendation in recommendations[:4] %}
+              <span class="chip">{{ recommendation }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="findings-heading">
+      <div class="section-header">
+        <h2 id="findings-heading">Findings by severity</h2>
+        <p>Critical and high findings appear first so the most dangerous regressions are impossible to miss.</p>
+      </div>
+      <div class="grid-two" style="grid-template-columns: 1fr;">
+        <div class="panel">
+          <div class="findings">
+            {% for severity, items in findings_by_severity.items() %}
+              {% if items %}
+                {% for item in items %}
+                  <details class="finding" {% if severity in ['Critical', 'High'] %}open{% endif %}>
+                    <summary>
+                      <span class="badge" data-risk="{{ item.severity }}">{{ item.severity_label }}</span>
+                      <span class="finding-title">{{ item.title }}</span>
+                      <span class="finding-columns">{{ item.affected_columns }}</span>
+                      <span class="muted">{{ item.code }}</span>
+                    </summary>
+                    <div class="finding-body">
+                      <p>{{ item.message }}</p>
+                      <p><strong>Recommendation:</strong> {{ item.recommendation }}</p>
+                    </div>
+                  </details>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+            {% if not findings %}
+              <div class="recommendation">No high-risk drift detected. The new dataset looks safe to use.</div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="renames-heading">
+      <div class="section-header">
+        <h2 id="renames-heading">Rename suggestions</h2>
+        <p>Likely column renames are surfaced before the structural diff so schema changes are easier to reason about.</p>
+      </div>
+      {% if rename_suggestions %}
+        <div class="rename-grid">
+          {% for suggestion in rename_suggestions %}
+            <article class="rename-card">
+              <strong>{{ suggestion.old_column }} -> {{ suggestion.new_column }}</strong>
+              <div class="rename-meta">
+                <span class="rename-chip">Confidence {{ suggestion.confidence_label }}</span>
+                <span class="rename-chip">Name {{ suggestion.name_similarity_label }}</span>
+                <span class="rename-chip">Profile {{ suggestion.profile_similarity_label }}</span>
+              </div>
+              <p class="rename-reason">{{ suggestion.reason }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="recommendations" style="padding-top: 0;">
+          <div class="recommendation">No rename suggestions detected.</div>
+        </div>
+      {% endif %}
+    </section>
+
+    <section class="section" aria-labelledby="columns-heading">
+      <div class="section-header">
+        <h2 id="columns-heading">Column-level diff</h2>
+        <p>This table captures the shared columns and shows how the shape, null rate, and uniqueness changed from old to new.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Column</th>
+              <th>Severity</th>
+              <th>Old Type</th>
+              <th>New Type</th>
+              <th>Old Null</th>
+              <th>New Null</th>
+              <th>Old Unique</th>
+              <th>New Unique</th>
+              <th>Notes</th>
+              <th>Drift</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in column_rows %}
+              <tr>
+                <td><strong>{{ row.column }}</strong></td>
+                <td><span class="badge" data-risk="{{ row.severity }}">{{ row.severity_label }}</span></td>
+                <td>{{ row.old_type }}</td>
+                <td>{{ row.new_type }}</td>
+                <td>{{ row.old_null }}</td>
+                <td>{{ row.new_null }}</td>
+                <td>{{ row.old_unique }}</td>
+                <td>{{ row.new_unique }}</td>
+                <td>{{ row.notes }}</td>
+                <td>{{ row.drift_summary }}</td>
+              </tr>
+            {% endfor %}
+            {% if not column_rows %}
+              <tr>
+                <td colspan="10" class="muted">No shared columns available for a side-by-side diff.</td>
+              </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="files-heading">
+      <div class="section-header">
+        <h2 id="files-heading">File details and outputs</h2>
+        <p>The report keeps the provenance visible so the artifact is easy to trust, cite, and share.</p>
+      </div>
+      <div class="grid-two">
+        <div class="panel">
+          <h3>Compared files</h3>
+          <div class="two-col-list">
+            <div class="mini-card"><span>Old</span><strong>{{ old_path }}</strong></div>
+            <div class="mini-card"><span>New</span><strong>{{ new_path }}</strong></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Outputs</h3>
+          {% if output_files %}
+            <div class="chips">
+              {% for name, path in output_files.items() %}
+                <span class="chip">{{ name }}: {{ path }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="mini-card">Reports were not written.</div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="recommendations-heading">
+      <div class="section-header">
+        <h2 id="recommendations-heading">Recommendations</h2>
+        <p>Action-oriented guidance that keeps the report useful even when it is read in isolation.</p>
+      </div>
+      <div class="recommendations">
+        {% for recommendation in recommendations %}
+          <div class="recommendation">{{ recommendation }}</div>
+        {% endfor %}
+      </div>
+      <div class="footer">
+        Generated with Schema Sentinel. The layout is optimized for readable screenshots, GitHub previews,
+        and fast mobile scanning.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "output": {
+    "directory": "outputs",
+    "formats": ["markdown", "html", "json"],
+    "fail_on": "high"
+  },
+  "matching": {
+    "rename_threshold": 0.78,
+    "name_weight": 0.35,
+    "data_weight": 0.55,
+    "type_weight": 0.1
+  },
+  "drift": {
+    "row_low": 0.05,
+    "row_medium": 0.2,
+    "row_high": 0.5,
+    "null_rate_low": 0.05,
+    "null_rate_medium": 0.12,
+    "null_rate_high": 0.25,
+    "unique_ratio_low": 0.12,
+    "unique_ratio_medium": 0.25,
+    "numeric_composite_medium": 0.15,
+    "numeric_composite_high": 0.35
+  }
+}

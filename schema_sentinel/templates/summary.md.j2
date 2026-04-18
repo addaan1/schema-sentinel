@@ -1,0 +1,94 @@
+# Schema Sentinel Report
+
+_Generated {{ generated_at }}_
+
+## Overview
+
+| Metric | Value |
+| --- | --- |
+| Compared files | `{{ old_path }}` -> `{{ new_path }}` |
+| Overall risk | **{{ overall_risk }}** |
+| Stability score | **{{ stability_score }}/100** |
+| Rows | {{ row_change }} |
+| Columns | {{ column_change }} |
+| Added columns | {{ counts.added }} |
+| Removed columns | {{ counts.removed }} |
+| Rename suggestions | {{ counts.renamed }} |
+| Shared columns | {{ counts.shared }} |
+| Findings | {{ summary.total }} |
+
+## Severity Summary
+
+| Severity | Count |
+| --- | --- |
+| Critical | {{ summary.critical }} |
+| High | {{ summary.high }} |
+| Medium | {{ summary.medium }} |
+| Low | {{ summary.low }} |
+
+## Top Findings
+
+{% if top_findings %}
+{% for finding in top_findings %}
+- **{{ finding.severity_label }}** - {{ finding.title }}
+  {{ finding.message }}
+{% endfor %}
+{% else %}
+- No high-risk drift detected.
+{% endif %}
+
+## Rename Suggestions
+
+{% if rename_suggestions %}
+| Old column | Suggested new column | Confidence | Reason |
+| --- | --- | --- | --- |
+{% for suggestion in rename_suggestions %}
+| `{{ suggestion.old_column }}` | `{{ suggestion.new_column }}` | {{ suggestion.confidence_label }} | {{ suggestion.reason }} |
+{% endfor %}
+{% else %}
+- None
+{% endif %}
+
+## Column Changes
+
+| Column | Severity | Old Type | New Type | Old Null | New Null | Old Unique | New Unique | Notes | Drift |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+{% for row in column_rows %}
+| {{ row.column }} | {{ row.severity_label }} | {{ row.old_type }} | {{ row.new_type }} | {{ row.old_null }} | {{ row.new_null }} | {{ row.old_unique }} | {{ row.new_unique }} | {{ row.notes }} | {{ row.drift_summary }} |
+{% endfor %}
+
+## Added Columns
+
+{% if added_columns %}
+{% for column in added_columns %}
+- `{{ column }}`
+{% endfor %}
+{% else %}
+- None
+{% endif %}
+
+## Removed Columns
+
+{% if removed_columns %}
+{% for column in removed_columns %}
+- `{{ column }}`
+{% endfor %}
+{% else %}
+- None
+{% endif %}
+
+## Recommendations
+
+{% for recommendation in recommendations %}
+- {{ recommendation }}
+{% endfor %}
+
+## Output
+
+{% if output_files %}
+{% for name, path in output_files.items() %}
+- {{ name.title() }}: `{{ path }}`
+{% endfor %}
+{% else %}
+- Reports were not written.
+{% endif %}
