@@ -30,7 +30,11 @@ Schema Sentinel compares two CSV snapshots and turns raw differences into a rank
 </table>
 
 <p align="center">
-  <img src="assets/report-preview.svg" alt="Schema Sentinel report preview" width="100%" />
+  <img src="assets/report-preview.png" alt="Schema Sentinel report preview rendered from outputs/report.html" width="100%" />
+</p>
+
+<p align="center">
+  <em>Preview rendered from <code>outputs/report.html</code>.</em>
 </p>
 
 ## Example Data
