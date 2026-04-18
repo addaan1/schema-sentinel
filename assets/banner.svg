@@ -55,17 +55,17 @@
     CSV DRIFT DETECTOR
   </text>
 
-  <text x="128" y="188" fill="#F8FAFC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-2.4">
+  <text x="128" y="182" fill="#F8FAFC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-2">
     Schema Sentinel
   </text>
-  <text x="128" y="238" fill="#C7D2FE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">
-    Catch dataset drift before it breaks your pipeline.
+  <text x="128" y="226" fill="#C7D2FE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">
+    Catch drift before it breaks your pipeline.
   </text>
-  <text x="128" y="278" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500">
-    Compare old vs new snapshots, score risk, and export reports for humans or automation.
+  <text x="128" y="258" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="500">
+    Compare snapshots, score risk, and export reports for humans or automation.
   </text>
 
-  <g transform="translate(128 308)">
+  <g transform="translate(128 296)">
     <rect width="150" height="42" rx="21" fill="url(#chip)" stroke="#FFFFFF" stroke-opacity="0.08"/>
     <text x="75" y="27" text-anchor="middle" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">COMPARE</text>
 
@@ -76,7 +76,7 @@
     <text x="404" y="27" text-anchor="middle" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">SHARE</text>
   </g>
 
-  <g transform="translate(128 366)">
+  <g transform="translate(128 354)">
     <rect width="600" height="42" rx="14" fill="#020617" fill-opacity="0.78" stroke="#38BDF8" stroke-opacity="0.18"/>
     <text x="22" y="28" fill="#93C5FD" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" font-weight="700">
       python -m schema_sentinel compare old.csv new.csv
@@ -92,46 +92,46 @@
     REPORT
   </text>
 
-  <text x="1112" y="194" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="52" font-weight="900" letter-spacing="-2.2">
+  <text x="1112" y="188" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-2">
     CRITICAL
   </text>
-  <text x="1112" y="232" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">
+  <text x="1112" y="226" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">
     stability score
   </text>
-  <text x="1112" y="284" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-4">
+  <text x="1112" y="276" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-3.5">
     38
   </text>
-  <text x="1210" y="284" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">
+  <text x="1200" y="276" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">
     / 100
   </text>
 
-  <g transform="translate(1112 306)">
+  <g transform="translate(1112 296)">
     <rect width="318" height="16" rx="8" fill="#E2E8F0"/>
     <rect width="214" height="16" rx="8" fill="#2563EB"/>
   </g>
 
   <g>
-    <rect x="1112" y="338" width="132" height="54" rx="16" fill="#EFF6FF"/>
-    <rect x="1258" y="338" width="132" height="54" rx="16" fill="#EFF6FF"/>
-    <rect x="1404" y="338" width="80" height="54" rx="16" fill="#EFF6FF"/>
+    <rect x="1112" y="324" width="132" height="54" rx="16" fill="#EFF6FF"/>
+    <rect x="1258" y="324" width="132" height="54" rx="16" fill="#EFF6FF"/>
+    <rect x="1404" y="324" width="80" height="54" rx="16" fill="#EFF6FF"/>
   </g>
   <g fill="#334155" font-family="Inter, Segoe UI, Arial, sans-serif">
-    <text x="1130" y="360" font-size="12" font-weight="800">Added</text>
-    <text x="1130" y="384" font-size="24" font-weight="900" fill="#1D4ED8">1</text>
-    <text x="1276" y="360" font-size="12" font-weight="800">Removed</text>
-    <text x="1276" y="384" font-size="24" font-weight="900" fill="#DC2626">1</text>
-    <text x="1410" y="360" font-size="12" font-weight="800">Findings</text>
-    <text x="1410" y="384" font-size="24" font-weight="900" fill="#0F172A">5</text>
+    <text x="1130" y="346" font-size="12" font-weight="800">Added</text>
+    <text x="1130" y="370" font-size="24" font-weight="900" fill="#1D4ED8">1</text>
+    <text x="1276" y="346" font-size="12" font-weight="800">Removed</text>
+    <text x="1276" y="370" font-size="24" font-weight="900" fill="#DC2626">1</text>
+    <text x="1410" y="346" font-size="12" font-weight="800">Findings</text>
+    <text x="1410" y="370" font-size="24" font-weight="900" fill="#0F172A">5</text>
   </g>
 
-  <g transform="translate(1112 410)">
+  <g transform="translate(1112 398)">
     <rect width="318" height="10" rx="5" fill="#E2E8F0"/>
     <rect width="86" height="10" rx="5" fill="#60A5FA"/>
     <rect x="100" width="60" height="10" rx="5" fill="#93C5FD"/>
     <rect x="174" width="112" height="10" rx="5" fill="#2563EB"/>
   </g>
 
-  <text x="1112" y="442" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">
+  <text x="1112" y="430" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">
     Markdown | HTML | JSON
   </text>
 </svg>
