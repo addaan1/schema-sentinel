@@ -36,7 +36,7 @@ Schema Sentinel compares two CSV snapshots and turns raw differences into a rank
 ## Example Data
 
 The bundled `examples/` folder is based on the Kaggle [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) dataset.
-The sample files are intentionally curated and trimmed so they stay small, but they still reflect a more realistic business table:
+The sample files are generated from telco-style patterns and expanded to 1,000+ rows so the demo feels closer to a real production table:
 
 - mixed numeric and categorical columns
 - service flags and contract fields
@@ -45,6 +45,8 @@ The sample files are intentionally curated and trimmed so they stay small, but t
 - a removed backup column to demonstrate schema drift
 
 That makes the demo more useful than a tiny toy CSV while keeping the repository lightweight.
+
+You can regenerate the example snapshots with `python scripts/generate_examples.py`.
 
 ## Why It Exists
 
@@ -128,12 +130,12 @@ Schema Sentinel
 Comparing old.csv -> new.csv
 
 Overall risk: CRITICAL
-Stability score: 36/100
+Stability score: 38/100
 
 Top findings
 - CRITICAL  Removed column `OnlineBackup`
 - HIGH      Numeric drift detected in `MonthlyCharges`
-- HIGH      Category drift detected in `Contract`
+- MEDIUM    Category drift detected in `PaymentMethod`
 
 Reports written to:
 - outputs/summary.md
