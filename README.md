@@ -5,7 +5,11 @@
 </p>
 
 <p align="center">
-  <strong>Catch dataset drift before it breaks your pipeline.</strong>
+  <strong>A CSV drift detector that explains what changed, how risky it is, and what to check next.</strong>
+</p>
+
+<p align="center">
+  Current release: <strong>v0.2.0</strong> - Built for CSV snapshots, CI checks, and fast human review
 </p>
 
 <p align="center">
@@ -14,25 +18,52 @@
   <img src="https://img.shields.io/badge/python-3.11%2B-3776AB.svg" alt="Python 3.11+">
 </p>
 
-Schema Sentinel is a lightweight open-source CLI for comparing two CSV files and surfacing the changes that matter most. It helps you spot schema drift, type changes, null spikes, rename candidates, category drift, and numeric shifts before they turn into broken dashboards, failed pipelines, or misleading models.
-
-## What It Does
-
-- Compare two CSV files with one command
-- Detect added and removed columns
-- Suggest likely column renames with similarity scoring
-- Detect semantic type changes
-- Measure null-rate, uniqueness, category drift, and numeric drift
-- Classify risk as `LOW`, `MEDIUM`, `HIGH`, or `CRITICAL`
-- Generate a terminal summary, `summary.md`, `report.html`, and `report.json`
-- Auto-load `config.json` from the working directory
-- Return CI-friendly exit codes for automation
-
-## Preview
+Schema Sentinel compares two CSV snapshots and turns raw differences into a ranked, readable report. It is designed for data teams, ML pipelines, and anyone who wants a clear answer to a simple question: **did the data change, and does it matter?**
 
 <p align="center">
   <img src="assets/report-preview.svg" alt="Schema Sentinel report preview" width="100%" />
 </p>
+
+## Why It Exists
+
+Most CSV diffs are technically correct but practically useless. Schema Sentinel focuses on the changes that usually cause real pain:
+
+- schema breaks that can crash downstream jobs
+- type changes that silently reshape your data
+- null spikes that make features or dashboards unreliable
+- category drift that introduces new values or removes old ones
+- numeric drift that suggests behavior or distribution changes
+- rename candidates that help you spot a column rebrand instead of a real deletion
+
+## How It Works
+
+1. You point Schema Sentinel at an old CSV and a new CSV.
+2. It profiles both files column by column.
+3. It matches similar columns, detects drift, and scores the risk.
+4. It prints a terminal summary and writes report artifacts for sharing or automation.
+
+## What You Get Back
+
+| Output | Purpose |
+| --- | --- |
+| Terminal report | Fast feedback in the console and CI logs |
+| `summary.md` | Easy to paste into GitHub issues, PRs, or artifacts |
+| `report.html` | A polished visual report for reviewers |
+| `report.json` | Machine-readable output for automation |
+
+## What It Detects
+
+| Signal | Why it matters |
+| --- | --- |
+| Added / removed columns | Usually the first sign of schema breakage |
+| Rename suggestions | Helps separate true deletions from renamed fields |
+| Type changes | Catches columns that changed from numeric to text, date to string, and more |
+| Null-rate changes | Surfaces missing-data spikes before they spread |
+| Unique-ratio changes | Highlights cardinality shifts and unstable columns |
+| Constant columns | Flags fields that stopped changing or were accidentally flattened |
+| Category drift | Detects new or disappearing discrete values |
+| Numeric drift | Spots distribution shifts in numeric columns |
+| Risk scoring | Converts many signals into `LOW`, `MEDIUM`, `HIGH`, or `CRITICAL` |
 
 ## Quick Start
 
@@ -42,65 +73,25 @@ Install the project locally:
 pip install -e .[dev]
 ```
 
-Run a comparison:
+Run the built-in example comparison:
 
 ```bash
 schema-sentinel compare examples/old.csv examples/new.csv
 ```
 
-Write the reports to a custom folder:
-
-```bash
-schema-sentinel compare examples/old.csv examples/new.csv --output-dir outputs
-```
-
-Choose a single format:
-
-```bash
-schema-sentinel compare examples/old.csv examples/new.csv --format markdown
-schema-sentinel compare examples/old.csv examples/new.csv --format html
-schema-sentinel compare examples/old.csv examples/new.csv --format json
-```
-
-Write every artifact explicitly:
+Write every report format in one pass:
 
 ```bash
 schema-sentinel compare examples/old.csv examples/new.csv --format all
 ```
 
-Override the config file:
+Send the reports to a custom folder:
 
 ```bash
-schema-sentinel compare examples/old.csv examples/new.csv --config config.json
+schema-sentinel compare examples/old.csv examples/new.csv --output-dir outputs
 ```
 
-## Configuration
-
-Schema Sentinel looks for `config.json` in the current working directory first. If it finds one, the CLI uses it automatically.
-
-Minimal example:
-
-```json
-{
-  "output": {
-    "directory": "outputs",
-    "formats": ["markdown", "html", "json"],
-    "fail_on": "high"
-  },
-  "matching": {
-    "rename_threshold": 0.78
-  }
-}
-```
-
-Useful fields:
-
-- `output.directory` - default artifact directory
-- `output.formats` - one or more of `markdown`, `html`, `json`
-- `output.fail_on` - severity threshold that triggers exit code `2`
-- `matching.rename_threshold` - confidence required to suggest a rename
-
-## Example Output
+## Example Result
 
 ```text
 Schema Sentinel
@@ -120,14 +111,33 @@ Reports written to:
 - outputs/report.json
 ```
 
-## Output Files
+## Configuration
 
-- `summary.md` for GitHub, PRs, and artifact browsing
-- `report.html` for a polished visual summary
-- `report.json` for automation and downstream tooling
-- terminal output for quick inspection and CI logs
+Schema Sentinel auto-loads `config.json` from the current working directory when it exists. You can also point to a different file with `--config`.
 
-## Command Reference
+Minimal example:
+
+```json
+{
+  "output": {
+    "directory": "outputs",
+    "formats": ["markdown", "html", "json"],
+    "fail_on": "high"
+  },
+  "matching": {
+    "rename_threshold": 0.78
+  }
+}
+```
+
+Useful settings:
+
+- `output.directory` controls where generated files are written
+- `output.formats` can be `markdown`, `html`, `json`, `both`, or `all`
+- `output.fail_on` sets the severity that should trigger exit code `2`
+- `matching.rename_threshold` tunes how confident a rename suggestion must be
+
+## CLI Reference
 
 ```bash
 schema-sentinel compare <old.csv> <new.csv> [OPTIONS]
@@ -135,70 +145,34 @@ schema-sentinel compare <old.csv> <new.csv> [OPTIONS]
 
 Options:
 
-- `--config` - path to a JSON config file
-- `--output-dir, -o` - directory for generated reports
-- `--format, -f` - `markdown`, `html`, `json`, `both`, or `all`
-- `--fail-on` - severity threshold that triggers a failing exit code
+| Option | Meaning |
+| --- | --- |
+| `--config` | Load settings from a JSON config file |
+| `--output-dir`, `-o` | Choose where report files are written |
+| `--format`, `-f` | Select `markdown`, `html`, `json`, `both`, or `all` |
+| `--fail-on` | Return exit code `2` when risk reaches the selected severity |
 
 Exit codes:
 
-- `0` - no findings
-- `1` - warnings below the configured failure threshold
-- `2` - critical or threshold-level drift detected
+- `0` means no findings or no risky drift
+- `1` means findings exist, but they stay below the fail threshold
+- `2` means critical drift or threshold-level risk was detected
 
-## Project Structure
+## Build And Release
 
-```text
-schema-sentinel/
-|-- schema_sentinel/
-|   |-- cli.py
-|   |-- compare.py
-|   |-- config.py
-|   |-- drift.py
-|   |-- matching.py
-|   |-- report.py
-|   |-- risk.py
-|   |-- utils.py
-|   `-- templates/
-|-- config.json
-|-- examples/
-|-- tests/
-|-- assets/
-|-- .github/workflows/
-|-- pyproject.toml
-`-- LICENSE
-```
-
-## Design Direction
-
-The HTML report uses a report-first visual language:
-
-- minimal Swiss-inspired hierarchy
-- strong contrast and clear spacing
-- bento-style summary cards
-- severity-first content ordering
-- accessible colors and focus states
-- responsive layout with no horizontal overflow
-
-## Packaging and Release
-
-Build the distribution locally:
+Install the packaging tools first, then build a local distribution:
 
 ```bash
+python -m pip install build twine
 python -m build
-```
-
-Check the generated artifacts:
-
-```bash
 twine check dist/*
 ```
 
-The repository includes a GitHub Actions workflow that builds the wheel and sdist, uploads them to GitHub Releases, and publishes to PyPI with trusted publishing when a release is cut.
+The repository also includes GitHub Actions for CI and release publishing so the project can be tested and packaged automatically.
 
 ## Development
 
-Run the tests:
+Run the test suite:
 
 ```bash
 pytest
@@ -212,16 +186,9 @@ ruff check .
 
 ## Roadmap
 
-### v0.2.0
-- config file support
-- rename suggestions and smarter column matching
-- JSON output
-- release packaging for GitHub and PyPI
-
-### v1.0.0
-- more file formats
-- stronger automation hooks
-- improved report explainability
+- smarter profile matching for renamed columns
+- additional file format support beyond CSV
+- richer automation hooks for larger pipelines
 
 ## License
 
