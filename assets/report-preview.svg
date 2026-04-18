@@ -15,12 +15,12 @@
     <rect x="80" y="66" width="1440" height="220" rx="32" fill="white"/>
   </g>
   <text x="126" y="134" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Schema Sentinel Report</text>
-  <text x="126" y="176" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">old.csv → new.csv</text>
+  <text x="126" y="176" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">old.csv -> new.csv</text>
   <rect x="126" y="202" width="120" height="34" rx="17" fill="#FEE2E2"/>
   <text x="186" y="225" text-anchor="middle" fill="#DC2626" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">CRITICAL</text>
-  <text x="1260" y="140" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-3">84</text>
+  <text x="1260" y="140" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-3">36</text>
   <text x="1260" y="178" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Stability score / 100</text>
-  <text x="1260" y="220" fill="#2563EB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">4 findings across 7 shared columns</text>
+  <text x="1260" y="220" fill="#2563EB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">5 findings across 15 shared columns</text>
 
   <g filter="url(#shadow)">
     <rect x="80" y="322" width="1440" height="180" rx="32" fill="white"/>
@@ -38,11 +38,11 @@
     <text x="150" y="424" font-size="13" font-weight="800">Critical</text>
     <text x="150" y="456" font-size="28" font-weight="800" fill="#DC2626">1</text>
     <text x="368" y="424" font-size="13" font-weight="800">High</text>
-    <text x="368" y="456" font-size="28" font-weight="800" fill="#EA580C">2</text>
+    <text x="368" y="456" font-size="28" font-weight="800" fill="#EA580C">1</text>
     <text x="586" y="424" font-size="13" font-weight="800">Medium</text>
-    <text x="586" y="456" font-size="28" font-weight="800" fill="#D97706">1</text>
+    <text x="586" y="456" font-size="28" font-weight="800" fill="#D97706">2</text>
     <text x="804" y="424" font-size="13" font-weight="800">Low</text>
-    <text x="804" y="456" font-size="28" font-weight="800" fill="#0891B2">0</text>
+    <text x="804" y="456" font-size="28" font-weight="800" fill="#0891B2">1</text>
     <text x="1022" y="424" font-size="13" font-weight="800">Added</text>
     <text x="1022" y="456" font-size="28" font-weight="800">1</text>
     <text x="1240" y="424" font-size="13" font-weight="800">Removed</text>
@@ -76,9 +76,8 @@
     <text x="1100" y="733">score</text>
   </g>
   <g fill="#2563EB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">
-    <text x="1280" y="633">numeric → numeric</text>
+    <text x="1280" y="633">numeric -> numeric</text>
     <text x="1280" y="683">categorical drift</text>
     <text x="1280" y="733">null spike</text>
   </g>
 </svg>
-

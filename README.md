@@ -13,12 +13,21 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/addaan1/schema-sentinel/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
-  <a href="https://github.com/addaan1/schema-sentinel/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/addaan1/schema-sentinel/ci.yml?branch=main" alt="CI"></a>
-  <img src="https://img.shields.io/badge/python-3.11%2B-3776AB.svg" alt="Python 3.11+">
+  <a href="https://github.com/addaan1/schema-sentinel/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-0f172a?style=for-the-badge&logo=apache&logoColor=white" alt="License"></a>
+  <a href="https://github.com/addaan1/schema-sentinel"><img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11+"></a>
+  <a href="https://github.com/addaan1/schema-sentinel/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
+  <img src="https://img.shields.io/badge/Reports-Markdown_%7C_HTML_%7C_JSON-0f766e?style=for-the-badge&logo=json&logoColor=white" alt="Reports">
 </p>
 
 Schema Sentinel compares two CSV snapshots and turns raw differences into a ranked, readable report. It is designed for data teams, ML pipelines, and anyone who wants a clear answer to a simple question: **did the data change, and does it matter?**
+
+<table>
+  <tr>
+    <td align="center"><strong>Compare</strong><br />Two CSV snapshots side by side.</td>
+    <td align="center"><strong>Score</strong><br />Risk from LOW to CRITICAL.</td>
+    <td align="center"><strong>Share</strong><br />Markdown, HTML, and JSON outputs.</td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="assets/report-preview.svg" alt="Schema Sentinel report preview" width="100%" />
@@ -80,13 +89,21 @@ Most CSV diffs are technically correct but practically useless. Schema Sentinel 
 
 ## Quick Start
 
-Install the project locally:
+Install the project locally with Python so the package lands in the active environment:
 
 ```bash
-pip install -e .[dev]
+python -m pip install -e .[dev]
 ```
 
-Run the built-in example comparison:
+Run the built-in example comparison with Python first:
+
+```bash
+python -m schema_sentinel compare examples/old.csv examples/new.csv
+```
+
+This is the safest first command on Windows because it works even when the `schema-sentinel` console script is not on `PATH` yet.
+
+After installation, the shorter console command also works:
 
 ```bash
 schema-sentinel compare examples/old.csv examples/new.csv
@@ -95,13 +112,13 @@ schema-sentinel compare examples/old.csv examples/new.csv
 Write every report format in one pass:
 
 ```bash
-schema-sentinel compare examples/old.csv examples/new.csv --format all
+python -m schema_sentinel compare examples/old.csv examples/new.csv --format all
 ```
 
 Send the reports to a custom folder:
 
 ```bash
-schema-sentinel compare examples/old.csv examples/new.csv --output-dir outputs
+python -m schema_sentinel compare examples/old.csv examples/new.csv --output-dir outputs
 ```
 
 ## Example Result
@@ -196,6 +213,19 @@ Run linting:
 ```bash
 ruff check .
 ```
+
+## Troubleshooting
+
+If you see `schema-sentinel : The term 'schema-sentinel' is not recognized`, the package is usually installed but the console script is not on `PATH` yet.
+
+- Use `python -m schema_sentinel compare examples/old.csv examples/new.csv` as the reliable fallback.
+- Make sure the same Python environment is active when you install and when you run the command.
+- If you just installed the project, close and reopen PowerShell so the new PATH entry can refresh.
+
+If `python` itself is not recognized on Windows:
+
+- Install Python 3.11 or newer.
+- Or disable the Windows App execution aliases for `python.exe` and `python3.exe`, then open a new terminal.
 
 ## Roadmap
 
