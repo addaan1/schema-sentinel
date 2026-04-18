@@ -23,3 +23,10 @@ Thumbs.db
 *.log
 *.tmp
 *.bak
+_publish/
+.git_acl.txt
+DESIGN_UI_UX_SPEC.md
+PRD.md
+findings.md
+progress.md
+task_plan.md
