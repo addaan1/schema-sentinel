@@ -24,6 +24,19 @@ Schema Sentinel compares two CSV snapshots and turns raw differences into a rank
   <img src="assets/report-preview.svg" alt="Schema Sentinel report preview" width="100%" />
 </p>
 
+## Example Data
+
+The bundled `examples/` folder is based on the Kaggle [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) dataset.
+The sample files are intentionally curated and trimmed so they stay small, but they still reflect a more realistic business table:
+
+- mixed numeric and categorical columns
+- service flags and contract fields
+- a billing column with a noticeable value shift
+- an added text feedback column in the newer snapshot
+- a removed backup column to demonstrate schema drift
+
+That makes the demo more useful than a tiny toy CSV while keeping the repository lightweight.
+
 ## Why It Exists
 
 Most CSV diffs are technically correct but practically useless. Schema Sentinel focuses on the changes that usually cause real pain:
@@ -98,12 +111,12 @@ Schema Sentinel
 Comparing old.csv -> new.csv
 
 Overall risk: CRITICAL
-Stability score: 38/100
+Stability score: 36/100
 
 Top findings
-- CRITICAL  Removed column `active`
-- HIGH      Numeric drift detected in `revenue`
-- HIGH      Category drift detected in `plan`
+- CRITICAL  Removed column `OnlineBackup`
+- HIGH      Numeric drift detected in `MonthlyCharges`
+- HIGH      Category drift detected in `Contract`
 
 Reports written to:
 - outputs/summary.md
