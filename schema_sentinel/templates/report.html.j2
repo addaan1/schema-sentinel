@@ -518,19 +518,21 @@
     <section class="hero" aria-labelledby="report-title">
       <div>
         <span class="eyebrow">Schema Sentinel Report</span>
-        <h1 id="report-title">Catch drift before the pipeline breaks.</h1>
-        <p class="hero-copy">
-          Comparing <strong>{{ old_path }}</strong> to <strong>{{ new_path }}</strong>. The report
-          highlights structural changes first, then drills into null-rate shifts, rename suggestions,
-          category drift, and numeric movement that could affect downstream consumers.
-        </p>
+        <h1 id="report-title">{{ hero_title }}</h1>
+        <p class="hero-copy">{{ hero_copy | safe }}</p>
         <div class="hero-meta">
+          <span class="pill">Mode {{ mode_label }}</span>
           <span class="pill">Generated {{ generated_at }}</span>
+          {% if mode == "validate" and contract_name %}
+            <span class="pill">Contract {{ contract_name }}</span>
+          {% endif %}
           <span class="pill">Rows {{ row_change }}</span>
           <span class="pill">Columns {{ column_change }}</span>
-          <span class="pill">Added {{ counts.added }}</span>
-          <span class="pill">Removed {{ counts.removed }}</span>
-          <span class="pill">Renames {{ counts.renamed }}</span>
+          <span class="pill">{{ added_label }} {{ counts.added }}</span>
+          <span class="pill">{{ removed_label }} {{ counts.removed }}</span>
+          {% if show_rename_section %}
+            <span class="pill">Renames {{ counts.renamed }}</span>
+          {% endif %}
         </div>
       </div>
       <aside class="risk-card">
@@ -541,7 +543,7 @@
         <div>
           <p class="score">{{ stability_score }}<small>Stability score / 100</small></p>
           <p class="muted" style="margin: 0;">
-            {{ summary.total }} findings across {{ shared_columns | length }} shared columns.
+            {{ summary.total }} {{ finding_label_plural }} across {{ shared_columns | length }} shared columns.
           </p>
         </div>
       </aside>
@@ -550,22 +552,22 @@
     <section class="section" aria-labelledby="summary-heading">
       <div class="section-header">
         <h2 id="summary-heading">Summary at a glance</h2>
-        <p>Small, dense cards make it easy to scan the result in seconds and still preserve detail.</p>
+        <p>{{ summary_intro }}</p>
       </div>
       <div class="cards">
         <div class="card"><span class="card-label">Critical</span><div class="card-value">{{ summary.critical }}</div><div class="card-note">Requires immediate attention</div></div>
         <div class="card"><span class="card-label">High</span><div class="card-value">{{ summary.high }}</div><div class="card-note">Likely breaking changes</div></div>
         <div class="card"><span class="card-label">Medium</span><div class="card-value">{{ summary.medium }}</div><div class="card-note">Review before release</div></div>
         <div class="card"><span class="card-label">Low</span><div class="card-value">{{ summary.low }}</div><div class="card-note">Informational drift</div></div>
-        <div class="card"><span class="card-label">Added columns</span><div class="card-value">{{ counts.added }}</div><div class="card-note">New schema fields</div></div>
-        <div class="card"><span class="card-label">Removed columns</span><div class="card-value">{{ counts.removed }}</div><div class="card-note">Missing schema fields</div></div>
+        <div class="card"><span class="card-label">{{ added_label }}</span><div class="card-value">{{ counts.added }}</div><div class="card-note">{{ added_note }}</div></div>
+        <div class="card"><span class="card-label">{{ removed_label }}</span><div class="card-value">{{ counts.removed }}</div><div class="card-note">{{ removed_note }}</div></div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="health-heading">
       <div class="section-header">
         <h2 id="health-heading">Health snapshot</h2>
-        <p>A compact status view that pairs the core counts with a quick look at the dataset shape.</p>
+        <p>{{ health_intro }}</p>
       </div>
       <div class="grid-two">
         <div class="panel">
@@ -590,8 +592,8 @@
 
     <section class="section" aria-labelledby="findings-heading">
       <div class="section-header">
-        <h2 id="findings-heading">Findings by severity</h2>
-        <p>Critical and high findings appear first so the most dangerous regressions are impossible to miss.</p>
+        <h2 id="findings-heading">{{ findings_title }}</h2>
+        <p>{{ findings_intro }}</p>
       </div>
       <div class="grid-two" style="grid-template-columns: 1fr;">
         <div class="panel">
@@ -622,6 +624,7 @@
       </div>
     </section>
 
+    {% if show_rename_section %}
     <section class="section" aria-labelledby="renames-heading">
       <div class="section-header">
         <h2 id="renames-heading">Rename suggestions</h2>
@@ -647,11 +650,12 @@
         </div>
       {% endif %}
     </section>
+    {% endif %}
 
     <section class="section" aria-labelledby="columns-heading">
       <div class="section-header">
-        <h2 id="columns-heading">Column-level diff</h2>
-        <p>This table captures the shared columns and shows how the shape, null rate, and uniqueness changed from old to new.</p>
+        <h2 id="columns-heading">{{ columns_title }}</h2>
+        <p>{{ columns_intro }}</p>
       </div>
       <div class="table-wrap">
         <table>

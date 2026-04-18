@@ -100,6 +100,11 @@ class ComparisonResult:
     fail_on: Severity
     exit_code: int
     stability_score: int
+    mode: str = "compare"
+    contract_path: Path | None = None
+    contract_breaches: list[Finding] = field(default_factory=list)
+    contract_metadata: dict[str, Any] = field(default_factory=dict)
+    schema_version: str = "0.3"
     output_dir: Path | None = None
     output_files: dict[str, Path] = field(default_factory=dict)
     generated_at: datetime = field(default_factory=lambda: datetime.now(UTC))

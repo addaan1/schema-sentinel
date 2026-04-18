@@ -6,16 +6,22 @@ _Generated {{ generated_at }}_
 
 | Metric | Value |
 | --- | --- |
+| Mode | `{{ mode }}` |
+{% if mode == "validate" %}
+| Validated dataset | `{{ new_path }}` |
+| Contract | `{{ contract_name }}` |
+{% else %}
 | Compared files | `{{ old_path }}` -> `{{ new_path }}` |
+{% endif %}
 | Overall risk | **{{ overall_risk }}** |
 | Stability score | **{{ stability_score }}/100** |
 | Rows | {{ row_change }} |
 | Columns | {{ column_change }} |
-| Added columns | {{ counts.added }} |
-| Removed columns | {{ counts.removed }} |
+| {{ added_label }} | {{ counts.added }} |
+| {{ removed_label }} | {{ counts.removed }} |
 | Rename suggestions | {{ counts.renamed }} |
 | Shared columns | {{ counts.shared }} |
-| Findings | {{ summary.total }} |
+| {{ finding_label_plural | title }} | {{ summary.total }} |
 
 ## Severity Summary
 
@@ -37,6 +43,7 @@ _Generated {{ generated_at }}_
 - No high-risk drift detected.
 {% endif %}
 
+{% if show_rename_section %}
 ## Rename Suggestions
 
 {% if rename_suggestions %}
@@ -48,6 +55,7 @@ _Generated {{ generated_at }}_
 {% else %}
 - None
 {% endif %}
+{% endif %}
 
 ## Column Changes
 
@@ -57,7 +65,7 @@ _Generated {{ generated_at }}_
 | {{ row.column }} | {{ row.severity_label }} | {{ row.old_type }} | {{ row.new_type }} | {{ row.old_null }} | {{ row.new_null }} | {{ row.old_unique }} | {{ row.new_unique }} | {{ row.notes }} | {{ row.drift_summary }} |
 {% endfor %}
 
-## Added Columns
+## {{ added_label }}
 
 {% if added_columns %}
 {% for column in added_columns %}
@@ -67,7 +75,7 @@ _Generated {{ generated_at }}_
 - None
 {% endif %}
 
-## Removed Columns
+## {{ removed_label }}
 
 {% if removed_columns %}
 {% for column in removed_columns %}

@@ -15,3 +15,7 @@ class ConfigurationError(SchemaSentinelError):
 
 class ComparisonError(SchemaSentinelError):
     """Raised when a comparison cannot be completed."""
+
+
+class ContractError(SchemaSentinelError):
+    """Raised when a schema contract cannot be loaded or validated."""

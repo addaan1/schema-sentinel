@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from collections import defaultdict
 from pathlib import Path
 
@@ -18,6 +19,7 @@ from .utils import (
 )
 
 SEVERITY_ORDER = [Severity.CRITICAL, Severity.HIGH, Severity.MEDIUM, Severity.LOW]
+REPORT_SCHEMA_VERSION = "0.3"
 
 
 def _load_template(name: str) -> str:
@@ -89,7 +91,63 @@ def _column_row(
     }
 
 
+def _result_labels(result: ComparisonResult) -> dict[str, object]:
+    if result.mode == "validate":
+        contract_name = result.contract_path.name if result.contract_path else "schema-contract.json"
+        return {
+            "hero_title": "Validate data against a committed contract.",
+            "hero_copy": (
+                f"Validating <strong>{result.new_path.name}</strong> against <strong>{contract_name}</strong>. "
+                "The report surfaces contract breaches first, then shows how the observed data "
+                "compares with the baseline profile stored in the contract."
+            ),
+            "summary_intro": "Contract breaches are grouped into dense cards so CI reviewers can scan the result fast.",
+            "findings_title": "Contract breaches",
+            "findings_intro": "Blocking contract violations appear first so release decisions stay obvious.",
+            "columns_title": "Column-level validation",
+            "columns_intro": (
+                "This table compares the observed dataset with the baseline profile captured in the contract."
+            ),
+            "health_intro": "A compact view of the contract baseline versus the current dataset shape.",
+            "added_label": "Unexpected columns",
+            "added_note": "Present outside the contract",
+            "removed_label": "Missing required",
+            "removed_note": "Required but absent",
+            "finding_label_plural": "breaches",
+            "mode_label": "Validate",
+            "show_rename_section": False,
+        }
+
+    return {
+        "hero_title": "Catch drift before the pipeline breaks.",
+        "hero_copy": (
+            f"Comparing <strong>{result.old_path.name}</strong> to <strong>{result.new_path.name}</strong>. "
+            "The report highlights structural changes first, then drills into null-rate shifts, "
+            "rename suggestions, category drift, and numeric movement that could affect downstream consumers."
+        ),
+        "summary_intro": "Small, dense cards make it easy to scan the result in seconds and still preserve detail.",
+        "findings_title": "Findings by severity",
+        "findings_intro": (
+            "Critical and high findings appear first so the most dangerous regressions are impossible to miss."
+        ),
+        "columns_title": "Column-level diff",
+        "columns_intro": (
+            "This table captures the shared columns and shows how the shape, null rate, "
+            "and uniqueness changed from old to new."
+        ),
+        "health_intro": "A compact status view that pairs the core counts with a quick look at the dataset shape.",
+        "added_label": "Added columns",
+        "added_note": "New schema fields",
+        "removed_label": "Removed columns",
+        "removed_note": "Missing schema fields",
+        "finding_label_plural": "findings",
+        "mode_label": "Compare",
+        "show_rename_section": True,
+    }
+
+
 def build_context(result: ComparisonResult) -> dict[str, object]:
+    labels = _result_labels(result)
     findings = sort_findings(result.findings)
     severity_groups: dict[str, list[dict[str, object]]] = {severity.title: [] for severity in SEVERITY_ORDER}
     column_findings: dict[str, list[Finding]] = defaultdict(list)
@@ -105,12 +163,19 @@ def build_context(result: ComparisonResult) -> dict[str, object]:
     summary = summarize_findings(result.findings)
     overall = severity_label(overall_severity(result.findings), result.findings)
     score = calculate_stability_score(result.findings)
+    breaches = [_finding_to_dict(finding) for finding in sort_findings(result.contract_breaches)]
 
     return {
+        "schema_version": REPORT_SCHEMA_VERSION,
+        "mode": result.mode,
+        "mode_label": labels["mode_label"],
         "project_name": "Schema Sentinel",
         "generated_at": result.generated_at.strftime("%Y-%m-%d %H:%M UTC"),
         "old_path": result.old_path.name,
         "new_path": result.new_path.name,
+        "contract_path": str(result.contract_path) if result.contract_path else None,
+        "contract_name": result.contract_path.name if result.contract_path else None,
+        "contract_metadata": result.contract_metadata,
         "old_rows": format_number(result.old_rows),
         "new_rows": format_number(result.new_rows),
         "old_columns": format_number(result.old_columns),
@@ -127,6 +192,7 @@ def build_context(result: ComparisonResult) -> dict[str, object]:
         "stability_score": score,
         "summary": summary,
         "findings": [_finding_to_dict(finding) for finding in findings],
+        "breaches": breaches,
         "findings_by_severity": severity_groups,
         "column_rows": column_rows,
         "recommendations": result.recommendations,
@@ -141,6 +207,20 @@ def build_context(result: ComparisonResult) -> dict[str, object]:
         },
         "has_critical": summary["critical"] > 0,
         "has_renames": bool(result.rename_suggestions),
+        "hero_title": labels["hero_title"],
+        "hero_copy": labels["hero_copy"],
+        "summary_intro": labels["summary_intro"],
+        "findings_title": labels["findings_title"],
+        "findings_intro": labels["findings_intro"],
+        "columns_title": labels["columns_title"],
+        "columns_intro": labels["columns_intro"],
+        "health_intro": labels["health_intro"],
+        "added_label": labels["added_label"],
+        "added_note": labels["added_note"],
+        "removed_label": labels["removed_label"],
+        "removed_note": labels["removed_note"],
+        "finding_label_plural": labels["finding_label_plural"],
+        "show_rename_section": labels["show_rename_section"],
     }
 
 
@@ -161,6 +241,46 @@ def render_html_report(result: ComparisonResult) -> str:
 def render_json_report(result: ComparisonResult) -> str:
     payload = build_context(result)
     return json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True)
+
+
+def render_github_step_summary(result: ComparisonResult) -> str:
+    context = build_context(result)
+    lines = [
+        "## Schema Sentinel",
+        "",
+        f"- Mode: `{context['mode']}`",
+        f"- Overall risk: **{context['overall_risk']}**",
+        f"- Stability score: **{context['stability_score']}/100**",
+        f"- {context['finding_label_plural'].title()}: **{context['summary']['total']}**",
+    ]
+
+    if context["mode"] == "validate" and context["contract_name"]:
+        lines.append(f"- Contract: `{context['contract_name']}`")
+        generated_from = context["contract_metadata"].get("generated_from", {})
+        if isinstance(generated_from, dict) and generated_from.get("file_name"):
+            lines.append(f"- Baseline source: `{generated_from['file_name']}`")
+    else:
+        lines.append(f"- Compared files: `{context['old_path']}` -> `{context['new_path']}`")
+
+    if context["top_findings"]:
+        lines.extend(["", "### Top issues"])
+        for finding in context["top_findings"]:
+            lines.append(f"- **{finding['severity_label']}** {finding['title']}")
+
+    if context["output_files"]:
+        lines.extend(["", "### Artifacts"])
+        for name, path in context["output_files"].items():
+            lines.append(f"- `{name}`: `{path}`")
+
+    return "\n".join(lines) + "\n"
+
+
+def write_github_step_summary(result: ComparisonResult) -> None:
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+
+    Path(summary_path).write_text(render_github_step_summary(result), encoding="utf-8")
 
 
 def write_reports(result: ComparisonResult, output_dir: Path, formats: tuple[str, ...]) -> dict[str, Path]:

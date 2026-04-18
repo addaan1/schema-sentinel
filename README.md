@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  Current release: <strong>v0.2.0</strong> - Built for CSV snapshots, CI checks, and fast human review
+  Current release: <strong>v0.3.0</strong> - Built for CSV snapshots, committed contracts, and fast CI review
 </p>
 
 <p align="center">
@@ -19,12 +19,17 @@
   <img src="https://img.shields.io/badge/Reports-Markdown_%7C_HTML_%7C_JSON-0f766e?style=for-the-badge&logo=json&logoColor=white" alt="Reports">
 </p>
 
-Schema Sentinel compares two CSV snapshots and turns raw differences into a ranked, readable report. It is designed for data teams, ML pipelines, and anyone who wants a clear answer to a simple question: **did the data change, and does it matter?**
+Schema Sentinel helps you do two related jobs well:
+
+- compare two CSV snapshots and understand what changed
+- validate a new CSV against a committed `schema-contract.json` in CI
+
+That makes it useful both for ad hoc investigation and for repeatable release checks where the team wants a contract they can review, commit, and enforce over time.
 
 <table>
   <tr>
     <td align="center"><strong>Compare</strong><br />Two CSV snapshots side by side.</td>
-    <td align="center"><strong>Score</strong><br />Risk from LOW to CRITICAL.</td>
+    <td align="center"><strong>Contract</strong><br />Generate and validate a baseline policy.</td>
     <td align="center"><strong>Share</strong><br />Markdown, HTML, and JSON outputs.</td>
   </tr>
 </table>
@@ -65,10 +70,10 @@ Most CSV diffs are technically correct but practically useless. Schema Sentinel 
 
 ## How It Works
 
-1. You point Schema Sentinel at an old CSV and a new CSV.
-2. It profiles both files column by column.
-3. It matches similar columns, detects drift, and scores the risk.
-4. It prints a terminal summary and writes report artifacts for sharing or automation.
+1. You either compare two CSV files or generate a baseline contract from one CSV.
+2. Schema Sentinel profiles the dataset column by column.
+3. It detects structural drift, distribution drift, or contract breaches.
+4. It prints a terminal summary and writes reports for humans and automation.
 
 ## What You Get Back
 
@@ -78,6 +83,7 @@ Most CSV diffs are technically correct but practically useless. Schema Sentinel 
 | `summary.md` | Easy to paste into GitHub issues, PRs, or artifacts |
 | `report.html` | A polished visual report for reviewers |
 | `report.json` | Machine-readable output for automation |
+| `schema-contract.json` | Commit-friendly baseline contract for repeatable validation |
 
 ## What It Detects
 
@@ -93,6 +99,19 @@ Most CSV diffs are technically correct but practically useless. Schema Sentinel 
 | Numeric drift | Spots distribution shifts in numeric columns |
 | Risk scoring | Converts many signals into `LOW`, `MEDIUM`, `HIGH`, or `CRITICAL` |
 
+## Contract-First Workflow
+
+Schema Sentinel v0.3 is designed around a simple loop:
+
+1. generate a baseline contract from a known-good CSV
+2. review and edit the generated `schema-contract.json`
+3. validate new CSV snapshots against that contract in CI
+4. fall back to `compare` when you want a richer side-by-side investigation
+
+The repository already includes a committed example contract:
+
+- [`schema-contract.json`](schema-contract.json)
+
 ## Quick Start
 
 Install the project locally with Python so the package lands in the active environment:
@@ -101,7 +120,19 @@ Install the project locally with Python so the package lands in the active envir
 python -m pip install -e .[dev]
 ```
 
-Run the built-in example comparison with Python first:
+Generate a baseline contract from the known-good example snapshot:
+
+```bash
+python -m schema_sentinel contract init examples/old.csv --out schema-contract.json
+```
+
+Validate a candidate snapshot against the contract:
+
+```bash
+python -m schema_sentinel validate examples/old.csv --contract schema-contract.json
+```
+
+Run the side-by-side comparison flow when you want a deeper diff:
 
 ```bash
 python -m schema_sentinel compare examples/old.csv examples/new.csv
@@ -118,28 +149,23 @@ schema-sentinel compare examples/old.csv examples/new.csv
 Write every report format in one pass:
 
 ```bash
-python -m schema_sentinel compare examples/old.csv examples/new.csv --format all
+python -m schema_sentinel validate examples/old.csv --contract schema-contract.json --format all
 ```
 
 Send the reports to a custom folder:
 
 ```bash
-python -m schema_sentinel compare examples/old.csv examples/new.csv --output-dir outputs
+python -m schema_sentinel validate examples/old.csv --contract schema-contract.json --output-dir outputs
 ```
 
 ## Example Result
 
 ```text
 Schema Sentinel
-Comparing old.csv -> new.csv
+Validating old.csv against schema-contract.json
 
-Overall risk: CRITICAL
-Stability score: 38/100
-
-Top findings
-- CRITICAL  Removed column `OnlineBackup`
-- HIGH      Numeric drift detected in `MonthlyCharges`
-- MEDIUM    Category drift detected in `PaymentMethod`
+Overall risk: SAFE
+Stability score: 100/100
 
 Reports written to:
 - outputs/summary.md
@@ -147,7 +173,18 @@ Reports written to:
 - outputs/report.json
 ```
 
+For a richer drift investigation, compare the old and new example snapshots directly:
+
+```bash
+python -m schema_sentinel compare examples/old.csv examples/new.csv
+```
+
 ## Configuration
+
+Schema Sentinel now uses two separate JSON files on purpose:
+
+- `config.json` for runtime behavior such as output directory and output formats
+- `schema-contract.json` for committed validation policy
 
 Schema Sentinel auto-loads `config.json` from the current working directory when it exists. You can also point to a different file with `--config`.
 
@@ -173,10 +210,41 @@ Useful settings:
 - `output.fail_on` sets the severity that should trigger exit code `2`
 - `matching.rename_threshold` tunes how confident a rename suggestion must be
 
+The generated contract is intentionally editable. A trimmed example looks like this:
+
+```json
+{
+  "fail_on": "high",
+  "dataset": {
+    "strict_columns": false,
+    "row_count": {
+      "baseline": 1000,
+      "min": 950,
+      "max": 1050
+    }
+  },
+  "columns": {
+    "MonthlyCharges": {
+      "required": true,
+      "ignore": false,
+      "semantic_type": "numeric",
+      "nullable": false,
+      "null_rate_max": 0.0,
+      "numeric_drift": {
+        "warn": 0.15,
+        "fail": 0.35
+      }
+    }
+  }
+}
+```
+
 ## CLI Reference
 
 ```bash
 schema-sentinel compare <old.csv> <new.csv> [OPTIONS]
+schema-sentinel contract init <baseline.csv> --out schema-contract.json
+schema-sentinel validate <candidate.csv> --contract schema-contract.json [OPTIONS]
 ```
 
 Options:
@@ -187,6 +255,8 @@ Options:
 | `--output-dir`, `-o` | Choose where report files are written |
 | `--format`, `-f` | Select `markdown`, `html`, `json`, `both`, or `all` |
 | `--fail-on` | Return exit code `2` when risk reaches the selected severity |
+| `--contract` | Path to the schema contract used by `validate` |
+| `--out` | Path written by `contract init` |
 
 Exit codes:
 
@@ -205,6 +275,12 @@ twine check dist/*
 ```
 
 The repository also includes GitHub Actions for CI and release publishing so the project can be tested and packaged automatically.
+
+The CI workflow now runs a dedicated contract validation job as well:
+
+- it validates `examples/old.csv` against the committed [`schema-contract.json`](schema-contract.json)
+- it writes `summary.md`, `report.html`, and `report.json` as workflow artifacts
+- it writes a short Markdown summary to `GITHUB_STEP_SUMMARY` for fast PR review
 
 ## Development
 
@@ -235,9 +311,9 @@ If `python` itself is not recognized on Windows:
 
 ## Roadmap
 
-- smarter profile matching for renamed columns
+- larger-file execution strategies beyond full in-memory CSV loading
 - additional file format support beyond CSV
-- richer automation hooks for larger pipelines
+- validation history and trend-aware drift monitoring
 
 ## License
 

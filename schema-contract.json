@@ -1,0 +1,1026 @@
+{
+  "columns": {
+    "Churn": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Yes",
+          "No"
+        ],
+        "is_constant": false,
+        "name": "Churn",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Yes",
+          "No"
+        ],
+        "semantic_type": "boolean",
+        "top_values": [
+          [
+            "No",
+            916
+          ],
+          [
+            "Yes",
+            84
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "boolean",
+      "unique_ratio_max": 0.052000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "Contract": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Month-to-month",
+          "One year",
+          "Two year"
+        ],
+        "is_constant": false,
+        "name": "Contract",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Month-to-month",
+          "One year",
+          "Two year"
+        ],
+        "semantic_type": "categorical",
+        "top_values": [
+          [
+            "Month-to-month",
+            334
+          ],
+          [
+            "One year",
+            333
+          ],
+          [
+            "Two year",
+            333
+          ]
+        ],
+        "unique_count": 3,
+        "unique_ratio": 0.003
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "categorical",
+      "unique_ratio_max": 0.053000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "Dependents": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Yes",
+          "No"
+        ],
+        "is_constant": false,
+        "name": "Dependents",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Yes",
+          "No"
+        ],
+        "semantic_type": "boolean",
+        "top_values": [
+          [
+            "No",
+            600
+          ],
+          [
+            "Yes",
+            400
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "boolean",
+      "unique_ratio_max": 0.052000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "InternetService": {
+      "baseline_profile": {
+        "distinct_values": [
+          "DSL",
+          "Fiber optic",
+          "No"
+        ],
+        "is_constant": false,
+        "name": "InternetService",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "DSL",
+          "Fiber optic",
+          "No"
+        ],
+        "semantic_type": "categorical",
+        "top_values": [
+          [
+            "DSL",
+            334
+          ],
+          [
+            "Fiber optic",
+            333
+          ],
+          [
+            "No",
+            333
+          ]
+        ],
+        "unique_count": 3,
+        "unique_ratio": 0.003
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "categorical",
+      "unique_ratio_max": 0.053000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "MonthlyCharges": {
+      "baseline_profile": {
+        "distinct_values": [
+          "56.00",
+          "91.25",
+          "20.50",
+          "56.75",
+          "93.50",
+          "31.25",
+          "54.50",
+          "82.75",
+          "29.00",
+          "65.25",
+          "85.00",
+          "24.25",
+          "63.00",
+          "86.50",
+          "22.75",
+          "58.25",
+          "22.00",
+          "84.25"
+        ],
+        "is_constant": false,
+        "name": "MonthlyCharges",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": {
+          "maximum": 93.5,
+          "mean": 57.712,
+          "median": 56.75,
+          "minimum": 20.5,
+          "p05": 20.5,
+          "p95": 93.5,
+          "std": 25.814037963867648
+        },
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "56.00",
+          "91.25",
+          "20.50",
+          "56.75",
+          "93.50"
+        ],
+        "semantic_type": "numeric",
+        "top_values": [
+          [
+            "91.25",
+            77
+          ],
+          [
+            "20.50",
+            77
+          ],
+          [
+            "56.75",
+            77
+          ],
+          [
+            "63.00",
+            76
+          ],
+          [
+            "93.50",
+            76
+          ]
+        ],
+        "unique_count": 18,
+        "unique_ratio": 0.018
+      },
+      "category_drift": null,
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": {
+        "fail": 0.35,
+        "warn": 0.15
+      },
+      "required": true,
+      "semantic_type": "numeric",
+      "unique_ratio_max": null,
+      "unique_ratio_min": null
+    },
+    "MultipleLines": {
+      "baseline_profile": {
+        "distinct_values": [
+          "No phone service",
+          "Yes",
+          "No"
+        ],
+        "is_constant": false,
+        "name": "MultipleLines",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "No phone service",
+          "Yes",
+          "No"
+        ],
+        "semantic_type": "categorical",
+        "top_values": [
+          [
+            "Yes",
+            455
+          ],
+          [
+            "No",
+            454
+          ],
+          [
+            "No phone service",
+            91
+          ]
+        ],
+        "unique_count": 3,
+        "unique_ratio": 0.003
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "categorical",
+      "unique_ratio_max": 0.053000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "OnlineBackup": {
+      "baseline_profile": {
+        "distinct_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ],
+        "is_constant": false,
+        "name": "OnlineBackup",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "No",
+          "Yes",
+          "No internet service"
+        ],
+        "semantic_type": "categorical",
+        "top_values": [
+          [
+            "No",
+            334
+          ],
+          [
+            "Yes",
+            333
+          ],
+          [
+            "No internet service",
+            333
+          ]
+        ],
+        "unique_count": 3,
+        "unique_ratio": 0.003
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "categorical",
+      "unique_ratio_max": 0.053000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "PaperlessBilling": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Yes",
+          "No"
+        ],
+        "is_constant": false,
+        "name": "PaperlessBilling",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Yes",
+          "No"
+        ],
+        "semantic_type": "boolean",
+        "top_values": [
+          [
+            "Yes",
+            667
+          ],
+          [
+            "No",
+            333
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "boolean",
+      "unique_ratio_max": 0.052000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "Partner": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Yes",
+          "No"
+        ],
+        "is_constant": false,
+        "name": "Partner",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Yes",
+          "No"
+        ],
+        "semantic_type": "boolean",
+        "top_values": [
+          [
+            "Yes",
+            667
+          ],
+          [
+            "No",
+            333
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "boolean",
+      "unique_ratio_max": 0.052000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "PaymentMethod": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Electronic check",
+          "Mailed check",
+          "Bank transfer (automatic)",
+          "Credit card (automatic)"
+        ],
+        "is_constant": false,
+        "name": "PaymentMethod",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Electronic check",
+          "Mailed check",
+          "Bank transfer (automatic)",
+          "Credit card (automatic)"
+        ],
+        "semantic_type": "categorical",
+        "top_values": [
+          [
+            "Electronic check",
+            250
+          ],
+          [
+            "Mailed check",
+            250
+          ],
+          [
+            "Bank transfer (automatic)",
+            250
+          ],
+          [
+            "Credit card (automatic)",
+            250
+          ]
+        ],
+        "unique_count": 4,
+        "unique_ratio": 0.004
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "categorical",
+      "unique_ratio_max": 0.054000000000000006,
+      "unique_ratio_min": 0.0
+    },
+    "PhoneService": {
+      "baseline_profile": {
+        "distinct_values": [
+          "No",
+          "Yes"
+        ],
+        "is_constant": false,
+        "name": "PhoneService",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "No",
+          "Yes"
+        ],
+        "semantic_type": "boolean",
+        "top_values": [
+          [
+            "Yes",
+            909
+          ],
+          [
+            "No",
+            91
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "boolean",
+      "unique_ratio_max": 0.052000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "SeniorCitizen": {
+      "baseline_profile": {
+        "distinct_values": [
+          "1",
+          "0"
+        ],
+        "is_constant": false,
+        "name": "SeniorCitizen",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": {
+          "maximum": 1.0,
+          "mean": 0.25,
+          "median": 0.0,
+          "minimum": 0.0,
+          "p05": 0.0,
+          "p95": 1.0,
+          "std": 0.4330127018922193
+        },
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "1",
+          "0"
+        ],
+        "semantic_type": "numeric",
+        "top_values": [
+          [
+            "0",
+            750
+          ],
+          [
+            "1",
+            250
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": null,
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": {
+        "fail": 0.35,
+        "warn": 0.15
+      },
+      "required": true,
+      "semantic_type": "numeric",
+      "unique_ratio_max": null,
+      "unique_ratio_min": null
+    },
+    "TotalCharges": {
+      "baseline_profile": {
+        "distinct_values": [
+          "47.00",
+          "642.50",
+          "327.50",
+          "1041.50",
+          "2320.00",
+          "776.50",
+          "2026.00",
+          "4007.50",
+          "1225.50",
+          "3010.50",
+          "5685.00",
+          "136.50",
+          "611.00",
+          "1602.50",
+          "585.50",
+          "1605.50",
+          "3280.00",
+          "1034.50",
+          "2590.00",
+          "4967.50",
+          "1483.50",
+          "190.50",
+          "885.00",
+          "394.50",
+          "1175.00",
+          "2562.50",
+          "843.50",
+          "2169.50",
+          "4240.00",
+          "1292.50",
+          "3154.00",
+          "167.50",
+          "193.50",
+          "754.50",
+          "1845.00",
+          "652.50",
+          "1739.00",
+          "3522.50",
+          "1101.50",
+          "2733.50",
+          "5200.00",
+          "1550.50",
+          "334.00",
+          "1127.50",
+          "451.50",
+          "1318.50",
+          "2805.00",
+          "910.50",
+          "2303.00",
+          "4482.50"
+        ],
+        "is_constant": false,
+        "name": "TotalCharges",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": {
+          "maximum": 5685.0,
+          "mean": 1800.4625,
+          "median": 1359.5,
+          "minimum": 47.0,
+          "p05": 167.5,
+          "p95": 4967.5,
+          "std": 1435.387053670107
+        },
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "47.00",
+          "642.50",
+          "327.50",
+          "1041.50",
+          "2320.00"
+        ],
+        "semantic_type": "numeric",
+        "top_values": [
+          [
+            "47.00",
+            14
+          ],
+          [
+            "642.50",
+            14
+          ],
+          [
+            "327.50",
+            14
+          ],
+          [
+            "1041.50",
+            14
+          ],
+          [
+            "2320.00",
+            14
+          ]
+        ],
+        "unique_count": 72,
+        "unique_ratio": 0.072
+      },
+      "category_drift": null,
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": {
+        "fail": 0.35,
+        "warn": 0.15
+      },
+      "required": true,
+      "semantic_type": "numeric",
+      "unique_ratio_max": null,
+      "unique_ratio_min": null
+    },
+    "customerID": {
+      "baseline_profile": {
+        "distinct_values": [
+          "CUST-000000",
+          "CUST-000001",
+          "CUST-000002",
+          "CUST-000003",
+          "CUST-000004",
+          "CUST-000005",
+          "CUST-000006",
+          "CUST-000007",
+          "CUST-000008",
+          "CUST-000009",
+          "CUST-000010",
+          "CUST-000011",
+          "CUST-000012",
+          "CUST-000013",
+          "CUST-000014",
+          "CUST-000015",
+          "CUST-000016",
+          "CUST-000017",
+          "CUST-000018",
+          "CUST-000019",
+          "CUST-000020",
+          "CUST-000021",
+          "CUST-000022",
+          "CUST-000023",
+          "CUST-000024",
+          "CUST-000025",
+          "CUST-000026",
+          "CUST-000027",
+          "CUST-000028",
+          "CUST-000029",
+          "CUST-000030",
+          "CUST-000031",
+          "CUST-000032",
+          "CUST-000033",
+          "CUST-000034",
+          "CUST-000035",
+          "CUST-000036",
+          "CUST-000037",
+          "CUST-000038",
+          "CUST-000039",
+          "CUST-000040",
+          "CUST-000041",
+          "CUST-000042",
+          "CUST-000043",
+          "CUST-000044",
+          "CUST-000045",
+          "CUST-000046",
+          "CUST-000047",
+          "CUST-000048",
+          "CUST-000049"
+        ],
+        "is_constant": false,
+        "name": "customerID",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "CUST-000000",
+          "CUST-000001",
+          "CUST-000002",
+          "CUST-000003",
+          "CUST-000004"
+        ],
+        "semantic_type": "text",
+        "top_values": [
+          [
+            "CUST-000000",
+            1
+          ],
+          [
+            "CUST-000001",
+            1
+          ],
+          [
+            "CUST-000002",
+            1
+          ],
+          [
+            "CUST-000003",
+            1
+          ],
+          [
+            "CUST-000004",
+            1
+          ]
+        ],
+        "unique_count": 1000,
+        "unique_ratio": 1.0
+      },
+      "category_drift": null,
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "text",
+      "unique_ratio_max": null,
+      "unique_ratio_min": null
+    },
+    "gender": {
+      "baseline_profile": {
+        "distinct_values": [
+          "Female",
+          "Male"
+        ],
+        "is_constant": false,
+        "name": "gender",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": null,
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "Female",
+          "Male"
+        ],
+        "semantic_type": "categorical",
+        "top_values": [
+          [
+            "Female",
+            500
+          ],
+          [
+            "Male",
+            500
+          ]
+        ],
+        "unique_count": 2,
+        "unique_ratio": 0.002
+      },
+      "category_drift": {
+        "max_new_ratio": 0.2,
+        "max_removed_ratio": 0.2
+      },
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": null,
+      "required": true,
+      "semantic_type": "categorical",
+      "unique_ratio_max": 0.052000000000000005,
+      "unique_ratio_min": 0.0
+    },
+    "tenure": {
+      "baseline_profile": {
+        "distinct_values": [
+          "1",
+          "8",
+          "15",
+          "22",
+          "29",
+          "36",
+          "43",
+          "50",
+          "57",
+          "64",
+          "71",
+          "6",
+          "13",
+          "20",
+          "27",
+          "34",
+          "41",
+          "48",
+          "55",
+          "62",
+          "69",
+          "4",
+          "11",
+          "18",
+          "25",
+          "32",
+          "39",
+          "46",
+          "53",
+          "60",
+          "67",
+          "2",
+          "9",
+          "16",
+          "23",
+          "30",
+          "37",
+          "44",
+          "51",
+          "58",
+          "65",
+          "72",
+          "7",
+          "14",
+          "21",
+          "28",
+          "35",
+          "42",
+          "49",
+          "56"
+        ],
+        "is_constant": false,
+        "name": "tenure",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "null_rate": 0.0,
+        "numeric_summary": {
+          "maximum": 72.0,
+          "mean": 36.46,
+          "median": 36.0,
+          "minimum": 1.0,
+          "p05": 4.0,
+          "p95": 69.0,
+          "std": 20.811352671078353
+        },
+        "pandas_dtype": "object",
+        "row_count": 1000,
+        "sample_values": [
+          "1",
+          "8",
+          "15",
+          "22",
+          "29"
+        ],
+        "semantic_type": "numeric",
+        "top_values": [
+          [
+            "1",
+            14
+          ],
+          [
+            "8",
+            14
+          ],
+          [
+            "15",
+            14
+          ],
+          [
+            "22",
+            14
+          ],
+          [
+            "29",
+            14
+          ]
+        ],
+        "unique_count": 72,
+        "unique_ratio": 0.072
+      },
+      "category_drift": null,
+      "ignore": false,
+      "null_rate_max": 0.0,
+      "nullable": false,
+      "numeric_drift": {
+        "fail": 0.35,
+        "warn": 0.15
+      },
+      "required": true,
+      "semantic_type": "numeric",
+      "unique_ratio_max": null,
+      "unique_ratio_min": null
+    }
+  },
+  "dataset": {
+    "row_count": {
+      "baseline": 1000,
+      "max": 1050,
+      "min": 950
+    },
+    "strict_columns": false
+  },
+  "fail_on": "high",
+  "generated_from": {
+    "columns": 16,
+    "file_name": "old.csv",
+    "generated_by": "0.2.0",
+    "path": "examples/old.csv",
+    "rows": 1000
+  },
+  "version": "1"
+}
