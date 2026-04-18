@@ -1,11 +1,7 @@
-id,name,region,plan,revenue,score,status,segment
-1,Ana,West,free,102,0.45,stable,core
-2,Budi,East,enterprise,180,0.39,stable,core
-3,Cici,West,free,97,,stable,core
-4,Dedi,North,enterprise,210,0.52,stable,core
-5,Eka,South,enterprise,260,0.48,stable,core
-6,Fajar,West,pro,145,0.41,stable,growth
-7,Gita,East,enterprise,190,0.37,stable,growth
-8,Hadi,North,enterprise,240,0.44,stable,growth
-9,Ika,South,enterprise,255,0.46,stable,growth
-
+customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Churn,CustomerFeedback
+0001-AH,Female,0,Yes,No,1,No,No phone service,DSL,Month-to-month,Yes,Electronic check,59.85,29.85,No,Setup was smooth but the billing page is hard to read
+0002-BK,Male,0,No,No,24,Yes,No,Fiber optic,Month-to-month,Yes,Electronic check,115.70,2061.20,Yes,Support was fast and the speed improved after upgrade
+0003-CR,Female,1,Yes,Yes,48,Yes,Yes,DSL,One year,No,Bank transfer (automatic),88.35,3089.80,No,Stable service and the contract is easier to manage
+0004-DL,Male,0,No,No,3,Yes,No,No,Month-to-month,Yes,Mailed check,39.10,60.30,Yes,Moved cities and kept the same plan
+0005-EP,Female,0,Yes,No,60,Yes,Yes,Fiber optic,Month-to-month,No,Credit card (automatic),131.45,6207.00,No,Great speed but the package feels expensive now
+0006-FX,Male,0,No,Yes,12,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),82.90,658.80,Yes,Works fine and the app is easy to use

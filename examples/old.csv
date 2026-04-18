@@ -1,10 +1,7 @@
-id,name,region,plan,revenue,score,active,status
-1,Ana,West,free,100,0.82,true,stable
-2,Budi,East,pro,120,0.67,true,stable
-3,Cici,West,free,95,0.73,false,stable
-4,Dedi,North,pro,140,0.91,true,stable
-5,Eka,South,enterprise,220,0.88,true,stable
-6,Fajar,West,pro,130,0.69,false,stable
-7,Gita,East,free,110,0.77,true,stable
-8,Hadi,North,pro,150,0.83,true,stable
-
+customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,OnlineBackup,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Churn
+0001-AH,Female,0,Yes,No,1,No,No phone service,DSL,No internet service,Month-to-month,Yes,Electronic check,29.85,29.85,No
+0002-BK,Male,0,No,No,24,Yes,No,Fiber optic,Yes,Month-to-month,Yes,Electronic check,85.70,2061.20,Yes
+0003-CR,Female,1,Yes,Yes,48,Yes,Yes,DSL,Yes,Two year,No,Bank transfer (automatic),64.35,3089.80,No
+0004-DL,Male,0,No,No,3,Yes,No,No,No internet service,Month-to-month,Yes,Mailed check,20.10,60.30,Yes
+0005-EP,Female,0,Yes,No,60,Yes,Yes,Fiber optic,No,One year,No,Credit card (automatic),103.45,6207.00,No
+0006-FX,Male,0,No,Yes,12,Yes,No,DSL,Yes,Month-to-month,Yes,Bank transfer (automatic),54.90,658.80,Yes
