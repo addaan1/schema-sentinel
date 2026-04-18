@@ -1,7 +1,1101 @@
 customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Churn,CustomerFeedback
-0001-AH,Female,0,Yes,No,1,No,No phone service,DSL,Month-to-month,Yes,Electronic check,59.85,29.85,No,Setup was smooth but the billing page is hard to read
-0002-BK,Male,0,No,No,24,Yes,No,Fiber optic,Month-to-month,Yes,Electronic check,115.70,2061.20,Yes,Support was fast and the speed improved after upgrade
-0003-CR,Female,1,Yes,Yes,48,Yes,Yes,DSL,One year,No,Bank transfer (automatic),88.35,3089.80,No,Stable service and the contract is easier to manage
-0004-DL,Male,0,No,No,3,Yes,No,No,Month-to-month,Yes,Mailed check,39.10,60.30,Yes,Moved cities and kept the same plan
-0005-EP,Female,0,Yes,No,60,Yes,Yes,Fiber optic,Month-to-month,No,Credit card (automatic),131.45,6207.00,No,Great speed but the package feels expensive now
-0006-FX,Male,0,No,Yes,12,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),82.90,658.80,Yes,Works fine and the app is easy to use
+CUST-000000,Female,1,Yes,Yes,1,No,No phone service,DSL,Month-to-month,Yes,Digital wallet,74.00,47.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000001,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000002,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000003,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000004,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000005,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000006,Female,0,Yes,Yes,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,The service works well but the price feels high; no major issues this month
+CUST-000007,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000008,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000009,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000010,Female,0,Yes,Yes,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000011,Male,0,No,Yes,6,No,No phone service,No,Two year,No,Credit card (automatic),32.25,136.50,No,The service works well but the price feels high; no major issues this month
+CUST-000012,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000013,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000014,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000015,Male,0,Yes,Yes,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000016,Female,1,Yes,Yes,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000017,Male,1,No,No,48,Yes,Yes,No,Two year,No,Digital wallet,39.25,1034.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000018,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000019,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000020,Female,0,No,Yes,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000021,Male,0,Yes,Yes,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,The service works well but the price feels high; no major issues this month
+CUST-000022,Female,0,Yes,No,11,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,885.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000023,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000024,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000025,Male,1,Yes,Yes,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000026,Female,0,No,Yes,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,The service works well but the price feels high; no major issues this month
+CUST-000027,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000028,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000029,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000030,Female,0,Yes,Yes,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000031,Male,0,Yes,Yes,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,The service works well but the price feels high; no major issues this month
+CUST-000032,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000033,Male,1,Yes,No,16,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,754.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000034,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Digital wallet,110.00,1845.00,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000035,Male,0,No,Yes,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000036,Female,0,Yes,Yes,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,The service works well but the price feels high; no major issues this month
+CUST-000037,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000038,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000039,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000040,Female,1,Yes,Yes,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000041,Male,1,No,Yes,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,The service works well but the price feels high; no major issues this month
+CUST-000042,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000043,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000044,Female,0,No,No,21,No,No phone service,No,Two year,Yes,Electronic check,30.00,451.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000045,Male,0,Yes,Yes,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000046,Female,0,Yes,Yes,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,The service works well but the price feels high; no major issues this month
+CUST-000047,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000048,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000049,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000050,Female,0,No,Yes,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000051,Male,0,Yes,Yes,70,Yes,No,DSL,Month-to-month,Yes,Digital wallet,74.75,3297.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000052,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000053,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000054,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000055,Male,0,Yes,Yes,26,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,2087.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000056,Female,1,No,Yes,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,The service works well but the price feels high; no major issues this month
+CUST-000057,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000058,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000059,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000060,Female,0,Yes,Yes,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000061,Male,0,Yes,Yes,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,The service works well but the price feels high; no major issues this month
+CUST-000062,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000063,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000064,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000065,Male,1,No,Yes,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000066,Female,0,Yes,Yes,31,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,1462.00,No,The service works well but the price feels high; no major issues this month
+CUST-000067,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000068,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Digital wallet,37.00,967.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000069,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000070,Female,0,Yes,Yes,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000071,Male,0,No,Yes,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,The service works well but the price feels high; no major issues this month
+CUST-000072,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000073,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000074,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000075,Male,0,Yes,Yes,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000076,Female,0,Yes,Yes,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,The service works well but the price feels high; no major issues this month
+CUST-000077,Male,0,No,No,36,No,No phone service,No,Two year,No,Mailed check,32.25,776.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000078,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000079,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000080,Female,1,No,Yes,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000081,Male,1,Yes,Yes,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000082,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000083,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000084,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000085,Male,0,Yes,Yes,20,Yes,Yes,Fiber optic,One year,No,Digital wallet,116.25,1602.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000086,Female,0,No,Yes,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,The service works well but the price feels high; no major issues this month
+CUST-000087,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000088,Female,1,Yes,No,41,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,3280.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000089,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000090,Female,0,Yes,Yes,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000091,Male,0,Yes,Yes,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,The service works well but the price feels high; no major issues this month
+CUST-000092,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000093,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000094,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000095,Male,0,No,Yes,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000096,Female,1,Yes,Yes,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000097,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000098,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000099,Male,0,Yes,No,46,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,2169.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000100,Female,0,Yes,Yes,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000101,Male,0,No,Yes,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,The service works well but the price feels high; no major issues this month
+CUST-000102,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Digital wallet,72.50,3154.00,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000103,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000104,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000105,Male,1,Yes,Yes,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000106,Female,0,Yes,Yes,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,The service works well but the price feels high; no major issues this month
+CUST-000107,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000108,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000109,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000110,Female,0,No,Yes,51,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,1101.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000111,Male,0,Yes,Yes,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,The service works well but the price feels high; no major issues this month
+CUST-000112,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000113,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000114,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000115,Male,0,Yes,Yes,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000116,Female,0,No,Yes,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,The service works well but the price feels high; no major issues this month
+CUST-000117,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000118,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000119,Male,0,No,No,42,Yes,No,No,Two year,No,Digital wallet,30.75,910.50,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000120,Female,1,Yes,Yes,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000121,Male,1,Yes,Yes,56,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,4482.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000122,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000123,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000124,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000125,Male,0,No,Yes,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000126,Female,0,Yes,Yes,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,The service works well but the price feels high; no major issues this month
+CUST-000127,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000128,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000129,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000130,Female,0,Yes,Yes,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000131,Male,0,No,Yes,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,The service works well but the price feels high; no major issues this month
+CUST-000132,Female,0,Yes,No,61,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,2867.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000133,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000134,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000135,Male,0,Yes,Yes,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000136,Female,1,Yes,Yes,17,Yes,Yes,Fiber optic,One year,Yes,Digital wallet,118.50,1360.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000137,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000138,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000139,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000140,Female,0,No,Yes,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000141,Male,0,Yes,Yes,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,The service works well but the price feels high; no major issues this month
+CUST-000142,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000143,Male,0,No,No,66,No,No phone service,No,Two year,No,Credit card (automatic),32.25,1426.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000144,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000145,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000146,Female,0,No,Yes,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,The service works well but the price feels high; no major issues this month
+CUST-000147,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000148,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000149,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000150,Female,0,Yes,Yes,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000151,Male,0,Yes,Yes,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,The service works well but the price feels high; no major issues this month
+CUST-000152,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000153,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,83.25,3010.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000154,Female,0,Yes,No,71,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,5685.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000155,Male,0,No,Yes,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000156,Female,0,Yes,Yes,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,The service works well but the price feels high; no major issues this month
+CUST-000157,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000158,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000159,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000160,Female,1,Yes,Yes,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000161,Male,1,No,Yes,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,The service works well but the price feels high; no major issues this month
+CUST-000162,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000163,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000164,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000165,Male,0,Yes,Yes,4,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,190.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000166,Female,0,Yes,Yes,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,The service works well but the price feels high; no major issues this month
+CUST-000167,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000168,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000169,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000170,Female,0,No,Yes,39,Yes,No,No,Two year,Yes,Digital wallet,28.50,843.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000171,Male,0,Yes,Yes,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,The service works well but the price feels high; no major issues this month
+CUST-000172,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000173,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000174,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000175,Male,0,Yes,Yes,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000176,Female,1,No,Yes,9,No,No phone service,No,Two year,Yes,Electronic check,30.00,193.50,No,The service works well but the price feels high; no major issues this month
+CUST-000177,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000178,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000179,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000180,Female,0,Yes,Yes,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000181,Male,0,Yes,Yes,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,The service works well but the price feels high; no major issues this month
+CUST-000182,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000183,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000184,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000185,Male,1,No,Yes,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000186,Female,0,Yes,Yes,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,The service works well but the price feels high; no major issues this month
+CUST-000187,Male,0,Yes,No,14,No,No phone service,Fiber optic,One year,No,Digital wallet,109.25,1127.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000188,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000189,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000190,Female,0,Yes,Yes,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000191,Male,0,No,Yes,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,The service works well but the price feels high; no major issues this month
+CUST-000192,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000193,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000194,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000195,Male,0,Yes,Yes,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000196,Female,0,Yes,Yes,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,The service works well but the price feels high; no major issues this month
+CUST-000197,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000198,Female,0,Yes,No,19,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,898.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000199,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000200,Female,1,No,Yes,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000201,Male,1,Yes,Yes,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000202,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000203,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000204,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,81.00,2867.00,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000205,Male,0,Yes,Yes,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000206,Female,0,No,Yes,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,The service works well but the price feels high; no major issues this month
+CUST-000207,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000208,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000209,Male,1,No,No,24,No,No phone service,No,Two year,No,Mailed check,32.25,518.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000210,Female,0,Yes,Yes,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000211,Male,0,Yes,Yes,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,The service works well but the price feels high; no major issues this month
+CUST-000212,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000213,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000214,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000215,Male,0,No,Yes,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000216,Female,1,Yes,Yes,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000217,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000218,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000219,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000220,Female,0,Yes,Yes,29,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,2320.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000221,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Digital wallet,39.25,776.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000222,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000223,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000224,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000225,Male,1,Yes,Yes,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000226,Female,0,Yes,Yes,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,The service works well but the price feels high; no major issues this month
+CUST-000227,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000228,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000229,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000230,Female,0,No,Yes,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000231,Male,0,Yes,Yes,34,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,1605.50,No,The service works well but the price feels high; no major issues this month
+CUST-000232,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000233,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000234,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000235,Male,0,Yes,Yes,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000236,Female,0,No,Yes,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,The service works well but the price feels high; no major issues this month
+CUST-000237,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000238,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Digital wallet,110.00,885.00,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000239,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000240,Female,1,Yes,Yes,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000241,Male,1,Yes,Yes,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000242,Female,0,No,No,39,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,843.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000243,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000244,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000245,Male,0,No,Yes,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000246,Female,0,Yes,Yes,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,The service works well but the price feels high; no major issues this month
+CUST-000247,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000248,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000249,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000250,Female,0,Yes,Yes,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000251,Male,0,No,Yes,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,The service works well but the price feels high; no major issues this month
+CUST-000252,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000253,Male,0,Yes,No,44,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,3522.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000254,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000255,Male,0,Yes,Yes,58,Yes,No,DSL,Month-to-month,Yes,Digital wallet,74.75,2733.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000256,Female,1,Yes,Yes,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000257,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000258,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000259,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000260,Female,0,No,Yes,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000261,Male,0,Yes,Yes,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,The service works well but the price feels high; no major issues this month
+CUST-000262,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000263,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000264,Female,1,Yes,No,49,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,2303.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000265,Male,1,Yes,Yes,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000266,Female,0,No,Yes,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,The service works well but the price feels high; no major issues this month
+CUST-000267,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000268,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000269,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000270,Female,0,Yes,Yes,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000271,Male,0,Yes,Yes,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,The service works well but the price feels high; no major issues this month
+CUST-000272,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Digital wallet,37.00,709.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000273,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000274,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000275,Male,0,No,Yes,54,No,No phone service,No,Two year,No,Credit card (automatic),32.25,1168.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000276,Female,0,Yes,Yes,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,The service works well but the price feels high; no major issues this month
+CUST-000277,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000278,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000279,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000280,Female,1,Yes,Yes,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000281,Male,1,No,Yes,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,The service works well but the price feels high; no major issues this month
+CUST-000282,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000283,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000284,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000285,Male,0,Yes,Yes,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000286,Female,0,Yes,Yes,59,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,4725.00,No,The service works well but the price feels high; no major issues this month
+CUST-000287,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000288,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000289,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Digital wallet,116.25,642.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000290,Female,0,No,Yes,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000291,Male,0,Yes,Yes,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,The service works well but the price feels high; no major issues this month
+CUST-000292,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000293,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000294,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000295,Male,0,Yes,Yes,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000296,Female,1,No,Yes,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,The service works well but the price feels high; no major issues this month
+CUST-000297,Male,1,Yes,No,64,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,3010.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000298,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000299,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000300,Female,0,Yes,Yes,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000301,Male,0,Yes,Yes,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The service works well but the price feels high; no major issues this month
+CUST-000302,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000303,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000304,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000305,Male,1,No,Yes,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000306,Female,0,Yes,Yes,55,Yes,No,DSL,Month-to-month,Yes,Digital wallet,72.50,2590.00,No,The service works well but the price feels high; new payment option is convenient
+CUST-000307,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000308,Female,0,No,No,69,No,No phone service,No,Two year,Yes,Electronic check,30.00,1483.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000309,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000310,Female,0,Yes,Yes,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000311,Male,0,No,Yes,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,The service works well but the price feels high; no major issues this month
+CUST-000312,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000313,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000314,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000315,Male,0,Yes,Yes,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000316,Female,0,Yes,Yes,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,The service works well but the price feels high; no major issues this month
+CUST-000317,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000318,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000319,Male,0,Yes,No,2,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,167.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000320,Female,1,No,Yes,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000321,Male,1,Yes,Yes,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000322,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000323,Male,0,No,No,30,Yes,No,No,Two year,No,Digital wallet,30.75,652.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000324,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000325,Male,0,Yes,Yes,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000326,Female,0,No,Yes,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,The service works well but the price feels high; no major issues this month
+CUST-000327,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000328,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000329,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000330,Female,0,Yes,Yes,7,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,334.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000331,Male,0,Yes,Yes,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,The service works well but the price feels high; no major issues this month
+CUST-000332,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000333,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000334,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000335,Male,0,No,Yes,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000336,Female,1,Yes,Yes,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000337,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000338,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000339,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000340,Female,0,Yes,Yes,5,Yes,Yes,Fiber optic,One year,Yes,Digital wallet,118.50,400.00,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000341,Male,0,No,Yes,12,No,No phone service,No,Two year,No,Mailed check,32.25,260.50,No,The service works well but the price feels high; no major issues this month
+CUST-000342,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000343,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000344,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000345,Male,1,Yes,Yes,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000346,Female,0,Yes,Yes,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,The service works well but the price feels high; no major issues this month
+CUST-000347,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000348,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000349,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000350,Female,0,No,Yes,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000351,Male,0,Yes,Yes,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,The service works well but the price feels high; no major issues this month
+CUST-000352,Female,1,Yes,No,17,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,1360.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000353,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000354,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000355,Male,0,Yes,Yes,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000356,Female,0,No,Yes,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,The service works well but the price feels high; no major issues this month
+CUST-000357,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,83.25,2446.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000358,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000359,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000360,Female,1,Yes,Yes,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000361,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000362,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000363,Male,0,Yes,No,22,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,1041.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000364,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000365,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000366,Female,0,Yes,Yes,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,The service works well but the price feels high; no major issues this month
+CUST-000367,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000368,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000369,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000370,Female,0,Yes,Yes,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000371,Male,0,No,Yes,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,The service works well but the price feels high; no major issues this month
+CUST-000372,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000373,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000374,Female,0,No,No,27,No,No phone service,No,Two year,Yes,Digital wallet,30.00,585.50,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000375,Male,0,Yes,Yes,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000376,Female,1,Yes,Yes,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000377,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000378,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000379,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000380,Female,0,No,Yes,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000381,Male,0,Yes,Yes,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,The service works well but the price feels high; no major issues this month
+CUST-000382,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000383,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000384,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000385,Male,1,Yes,Yes,32,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,2562.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000386,Female,0,No,Yes,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,The service works well but the price feels high; no major issues this month
+CUST-000387,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000388,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000389,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000390,Female,0,Yes,Yes,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000391,Male,0,Yes,Yes,2,Yes,No,Fiber optic,One year,No,Digital wallet,107.75,167.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000392,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000393,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000394,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000395,Male,0,No,Yes,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000396,Female,0,Yes,Yes,37,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,1739.00,No,The service works well but the price feels high; no major issues this month
+CUST-000397,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000398,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000399,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000400,Female,1,Yes,Yes,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000401,Male,1,No,Yes,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,The service works well but the price feels high; no major issues this month
+CUST-000402,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000403,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000404,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000405,Male,0,Yes,Yes,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000406,Female,0,Yes,Yes,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,The service works well but the price feels high; no major issues this month
+CUST-000407,Male,0,No,No,42,No,No phone service,No,Two year,No,Credit card (automatic),32.25,910.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000408,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,81.00,2303.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000409,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000410,Female,0,No,Yes,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000411,Male,0,Yes,Yes,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,The service works well but the price feels high; no major issues this month
+CUST-000412,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000413,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000414,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000415,Male,0,Yes,Yes,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000416,Female,1,No,Yes,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,The service works well but the price feels high; no major issues this month
+CUST-000417,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000418,Female,0,Yes,No,47,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,3765.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000419,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000420,Female,0,Yes,Yes,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000421,Male,0,Yes,Yes,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,The service works well but the price feels high; no major issues this month
+CUST-000422,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000423,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000424,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000425,Male,1,No,Yes,24,Yes,Yes,No,Two year,No,Digital wallet,39.25,518.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000426,Female,0,Yes,Yes,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,The service works well but the price feels high; no major issues this month
+CUST-000427,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000428,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000429,Male,0,Yes,No,52,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,2446.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000430,Female,0,Yes,Yes,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000431,Male,0,No,Yes,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,The service works well but the price feels high; no major issues this month
+CUST-000432,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000433,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000434,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000435,Male,0,Yes,Yes,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000436,Female,0,Yes,Yes,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,The service works well but the price feels high; no major issues this month
+CUST-000437,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000438,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000439,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000440,Female,1,No,Yes,57,No,No phone service,No,Two year,Yes,Electronic check,30.00,1225.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000441,Male,1,Yes,Yes,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000442,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Digital wallet,110.00,5685.00,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000443,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000444,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000445,Male,0,Yes,Yes,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000446,Female,0,No,Yes,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,The service works well but the price feels high; no major issues this month
+CUST-000447,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000448,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000449,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000450,Female,0,Yes,Yes,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000451,Male,0,Yes,Yes,62,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,4967.50,No,The service works well but the price feels high; no major issues this month
+CUST-000452,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000453,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000454,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000455,Male,0,No,Yes,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000456,Female,1,Yes,Yes,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000457,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000458,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000459,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Digital wallet,74.75,2169.50,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000460,Female,0,Yes,Yes,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000461,Male,0,No,Yes,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,The service works well but the price feels high; no major issues this month
+CUST-000462,Female,0,Yes,No,67,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,3154.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000463,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000464,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000465,Male,1,Yes,Yes,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000466,Female,0,Yes,Yes,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,The service works well but the price feels high; no major issues this month
+CUST-000467,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000468,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000469,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000470,Female,0,No,Yes,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000471,Male,0,Yes,Yes,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,The service works well but the price feels high; no major issues this month
+CUST-000472,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000473,Male,1,No,No,72,No,No phone service,No,Two year,No,Mailed check,32.25,1550.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000474,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000475,Male,0,Yes,Yes,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000476,Female,0,No,Yes,21,Yes,Yes,No,Two year,Yes,Digital wallet,37.00,451.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000477,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000478,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000479,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000480,Female,1,Yes,Yes,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000481,Male,1,Yes,Yes,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000482,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000483,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000484,Female,0,Yes,No,5,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,400.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000485,Male,0,No,Yes,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000486,Female,0,Yes,Yes,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,The service works well but the price feels high; no major issues this month
+CUST-000487,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000488,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000489,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000490,Female,0,Yes,Yes,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000491,Male,0,No,Yes,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,The service works well but the price feels high; no major issues this month
+CUST-000492,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000493,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Digital wallet,116.25,5442.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000494,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000495,Male,0,Yes,Yes,10,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,477.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000496,Female,1,Yes,Yes,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000497,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000498,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000499,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000500,Female,0,No,Yes,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000501,Male,0,Yes,Yes,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,The service works well but the price feels high; no major issues this month
+CUST-000502,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000503,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000504,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000505,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000506,Female,0,No,Yes,15,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,327.50,No,The service works well but the price feels high; no major issues this month
+CUST-000507,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000508,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000509,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000510,Female,0,Yes,Yes,43,Yes,No,DSL,Month-to-month,Yes,Digital wallet,72.50,2026.00,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000511,Male,0,Yes,Yes,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,The service works well but the price feels high; no major issues this month
+CUST-000512,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000513,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000514,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000515,Male,0,No,Yes,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000516,Female,0,Yes,Yes,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,The service works well but the price feels high; no major issues this month
+CUST-000517,Male,0,Yes,No,20,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,1602.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000518,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000519,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000520,Female,1,Yes,Yes,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000521,Male,1,No,Yes,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,The service works well but the price feels high; no major issues this month
+CUST-000522,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000523,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000524,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000525,Male,0,Yes,Yes,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000526,Female,0,Yes,Yes,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,The service works well but the price feels high; no major issues this month
+CUST-000527,Male,0,No,No,18,Yes,No,No,Two year,No,Digital wallet,30.75,394.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000528,Female,1,Yes,No,25,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,1175.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000529,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000530,Female,0,No,Yes,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000531,Male,0,Yes,Yes,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,The service works well but the price feels high; no major issues this month
+CUST-000532,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000533,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000534,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000535,Male,0,Yes,Yes,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000536,Female,1,No,Yes,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,The service works well but the price feels high; no major issues this month
+CUST-000537,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000538,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000539,Male,0,No,No,30,No,No phone service,No,Two year,No,Credit card (automatic),32.25,652.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000540,Female,0,Yes,Yes,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000541,Male,0,Yes,Yes,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,The service works well but the price feels high; no major issues this month
+CUST-000542,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000543,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000544,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Digital wallet,118.50,5200.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000545,Male,1,No,Yes,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000546,Female,0,Yes,Yes,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,The service works well but the price feels high; no major issues this month
+CUST-000547,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000548,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000549,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000550,Female,0,Yes,Yes,35,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,2805.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000551,Male,0,No,Yes,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,The service works well but the price feels high; no major issues this month
+CUST-000552,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000553,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000554,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000555,Male,0,Yes,Yes,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000556,Female,0,Yes,Yes,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,The service works well but the price feels high; no major issues this month
+CUST-000557,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000558,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000559,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000560,Female,1,No,Yes,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000561,Male,1,Yes,Yes,40,No,No phone service,DSL,Month-to-month,Yes,Digital wallet,76.25,1882.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000562,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000563,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000564,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000565,Male,0,Yes,Yes,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000566,Female,0,No,Yes,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,The service works well but the price feels high; no major issues this month
+CUST-000567,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000568,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000569,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000570,Female,0,Yes,Yes,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000571,Male,0,Yes,Yes,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,The service works well but the price feels high; no major issues this month
+CUST-000572,Female,0,No,No,45,No,No phone service,No,Two year,Yes,Electronic check,30.00,967.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000573,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000574,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000575,Male,0,No,Yes,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000576,Female,1,Yes,Yes,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000577,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000578,Female,0,No,No,15,Yes,No,No,Two year,Yes,Digital wallet,28.50,327.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000579,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000580,Female,0,Yes,Yes,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000581,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,The service works well but the price feels high; no major issues this month
+CUST-000582,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000583,Male,0,Yes,No,50,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,4007.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000584,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000585,Male,1,Yes,Yes,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000586,Female,0,Yes,Yes,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,The service works well but the price feels high; no major issues this month
+CUST-000587,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000588,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000589,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000590,Female,0,No,Yes,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000591,Male,0,Yes,Yes,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,The service works well but the price feels high; no major issues this month
+CUST-000592,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000593,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000594,Female,0,Yes,No,55,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,2590.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000595,Male,0,Yes,Yes,62,Yes,No,Fiber optic,One year,No,Digital wallet,107.75,4967.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000596,Female,0,No,Yes,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,The service works well but the price feels high; no major issues this month
+CUST-000597,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000598,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000599,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000600,Female,1,Yes,Yes,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000601,Male,1,Yes,Yes,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000602,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000603,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000604,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000605,Male,0,No,Yes,60,No,No phone service,No,Two year,No,Mailed check,32.25,1292.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000606,Female,0,Yes,Yes,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,The service works well but the price feels high; no major issues this month
+CUST-000607,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000608,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000609,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000610,Female,0,Yes,Yes,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000611,Male,0,No,Yes,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,The service works well but the price feels high; no major issues this month
+CUST-000612,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,81.00,1739.00,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000613,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000614,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000615,Male,0,Yes,Yes,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000616,Female,1,Yes,Yes,65,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,5200.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000617,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000618,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000619,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000620,Female,0,No,Yes,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000621,Male,0,Yes,Yes,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,The service works well but the price feels high; no major issues this month
+CUST-000622,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000623,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000624,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000625,Male,1,Yes,Yes,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000626,Female,0,No,Yes,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,The service works well but the price feels high; no major issues this month
+CUST-000627,Male,0,Yes,No,70,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,3297.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000628,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000629,Male,0,No,No,12,Yes,Yes,No,Two year,No,Digital wallet,39.25,260.50,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000630,Female,0,Yes,Yes,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000631,Male,0,Yes,Yes,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,The service works well but the price feels high; no major issues this month
+CUST-000632,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000633,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000634,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000635,Male,0,No,Yes,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000636,Female,0,Yes,Yes,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,The service works well but the price feels high; no major issues this month
+CUST-000637,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000638,Female,0,No,No,3,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,69.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000639,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000640,Female,1,Yes,Yes,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000641,Male,1,No,Yes,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,The service works well but the price feels high; no major issues this month
+CUST-000642,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000643,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000644,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000645,Male,0,Yes,Yes,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000646,Female,0,Yes,Yes,59,Yes,No,Fiber optic,One year,Yes,Digital wallet,110.00,4725.00,No,The service works well but the price feels high; new payment option is convenient
+CUST-000647,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000648,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000649,Male,1,Yes,No,8,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,642.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000650,Female,0,No,Yes,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000651,Male,0,Yes,Yes,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,The service works well but the price feels high; no major issues this month
+CUST-000652,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000653,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000654,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000655,Male,0,Yes,Yes,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000656,Female,1,No,Yes,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,The service works well but the price feels high; no major issues this month
+CUST-000657,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000658,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000659,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000660,Female,0,Yes,Yes,13,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,611.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000661,Male,0,Yes,Yes,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The service works well but the price feels high; no major issues this month
+CUST-000662,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000663,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Digital wallet,74.75,1605.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000664,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000665,Male,1,No,Yes,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000666,Female,0,Yes,Yes,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,The service works well but the price feels high; no major issues this month
+CUST-000667,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000668,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000669,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000670,Female,0,Yes,Yes,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000671,Male,0,No,Yes,18,No,No phone service,No,Two year,No,Credit card (automatic),32.25,394.50,No,The service works well but the price feels high; no major issues this month
+CUST-000672,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000673,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000674,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000675,Male,0,Yes,Yes,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000676,Female,0,Yes,Yes,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,The service works well but the price feels high; no major issues this month
+CUST-000677,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000678,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000679,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000680,Female,1,No,Yes,9,Yes,Yes,No,Two year,Yes,Digital wallet,37.00,193.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000681,Male,1,Yes,Yes,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000682,Female,0,Yes,No,23,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,1845.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000683,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000684,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000685,Male,0,Yes,Yes,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000686,Female,0,No,Yes,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,The service works well but the price feels high; no major issues this month
+CUST-000687,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000688,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000689,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000690,Female,0,Yes,Yes,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000691,Male,0,Yes,Yes,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,The service works well but the price feels high; no major issues this month
+CUST-000692,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000693,Male,0,Yes,No,28,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,1318.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000694,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000695,Male,0,No,Yes,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000696,Female,1,Yes,Yes,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000697,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Digital wallet,116.25,4482.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000698,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000699,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000700,Female,0,Yes,Yes,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000701,Male,0,No,Yes,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,The service works well but the price feels high; no major issues this month
+CUST-000702,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000703,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000704,Female,1,No,No,33,No,No phone service,No,Two year,Yes,Electronic check,30.00,709.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000705,Male,1,Yes,Yes,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000706,Female,0,Yes,Yes,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,The service works well but the price feels high; no major issues this month
+CUST-000707,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000708,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000709,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000710,Female,0,No,Yes,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000711,Male,0,Yes,Yes,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,The service works well but the price feels high; no major issues this month
+CUST-000712,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000713,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000714,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Digital wallet,72.50,1462.00,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000715,Male,0,Yes,Yes,38,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,3047.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000716,Female,0,No,Yes,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,The service works well but the price feels high; no major issues this month
+CUST-000717,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000718,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000719,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000720,Female,1,Yes,Yes,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000721,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000722,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000723,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000724,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000725,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000726,Female,0,Yes,Yes,43,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,2026.00,No,The service works well but the price feels high; no major issues this month
+CUST-000727,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000728,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000729,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000730,Female,0,Yes,Yes,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000731,Male,0,No,Yes,6,Yes,No,No,Two year,No,Digital wallet,30.75,136.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000732,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000733,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000734,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000735,Male,0,Yes,Yes,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000736,Female,1,Yes,Yes,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000737,Male,1,No,No,48,No,No phone service,No,Two year,No,Mailed check,32.25,1034.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000738,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000739,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000740,Female,0,No,Yes,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000741,Male,0,Yes,Yes,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,The service works well but the price feels high; no major issues this month
+CUST-000742,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000743,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000744,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000745,Male,1,Yes,Yes,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000746,Female,0,No,Yes,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,The service works well but the price feels high; no major issues this month
+CUST-000747,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000748,Female,0,Yes,No,53,No,No phone service,Fiber optic,One year,Yes,Digital wallet,111.50,4240.00,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000749,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000750,Female,0,Yes,Yes,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000751,Male,0,Yes,Yes,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,The service works well but the price feels high; no major issues this month
+CUST-000752,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000753,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000754,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000755,Male,0,No,Yes,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000756,Female,0,Yes,Yes,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,The service works well but the price feels high; no major issues this month
+CUST-000757,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000758,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000759,Male,0,Yes,No,58,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,2733.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000760,Female,1,Yes,Yes,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000761,Male,1,No,Yes,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,The service works well but the price feels high; no major issues this month
+CUST-000762,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000763,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000764,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000765,Male,0,Yes,Yes,28,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,83.25,1318.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000766,Female,0,Yes,Yes,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,The service works well but the price feels high; no major issues this month
+CUST-000767,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000768,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000769,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000770,Female,0,No,Yes,63,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,1359.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000771,Male,0,Yes,Yes,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,The service works well but the price feels high; no major issues this month
+CUST-000772,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000773,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000774,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000775,Male,0,Yes,Yes,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000776,Female,1,No,Yes,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,The service works well but the price feels high; no major issues this month
+CUST-000777,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000778,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000779,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000780,Female,0,Yes,Yes,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000781,Male,0,Yes,Yes,68,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,5442.50,No,The service works well but the price feels high; no major issues this month
+CUST-000782,Female,0,No,No,3,Yes,No,No,Two year,Yes,Digital wallet,28.50,69.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000783,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000784,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000785,Male,1,No,Yes,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000786,Female,0,Yes,Yes,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,The service works well but the price feels high; no major issues this month
+CUST-000787,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000788,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000789,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000790,Female,0,Yes,Yes,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000791,Male,0,No,Yes,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,The service works well but the price feels high; no major issues this month
+CUST-000792,Female,1,Yes,No,1,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,47.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000793,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000794,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000795,Male,0,Yes,Yes,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000796,Female,0,Yes,Yes,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,The service works well but the price feels high; no major issues this month
+CUST-000797,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000798,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000799,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Digital wallet,107.75,4007.50,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000800,Female,1,No,Yes,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000801,Male,1,Yes,Yes,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000802,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000803,Male,0,No,No,6,No,No phone service,No,Two year,No,Credit card (automatic),32.25,136.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000804,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000805,Male,0,Yes,Yes,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000806,Female,0,No,Yes,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,The service works well but the price feels high; no major issues this month
+CUST-000807,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000808,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000809,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000810,Female,0,Yes,Yes,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000811,Male,0,Yes,Yes,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,The service works well but the price feels high; no major issues this month
+CUST-000812,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000813,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000814,Female,0,Yes,No,11,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,885.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000815,Male,0,No,Yes,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000816,Female,1,Yes,Yes,25,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,81.00,1175.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000817,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000818,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000819,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000820,Female,0,Yes,Yes,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000821,Male,0,No,Yes,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,The service works well but the price feels high; no major issues this month
+CUST-000822,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000823,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000824,Female,1,No,No,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000825,Male,1,Yes,Yes,16,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,754.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000826,Female,0,Yes,Yes,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,The service works well but the price feels high; no major issues this month
+CUST-000827,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000828,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000829,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000830,Female,0,No,Yes,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000831,Male,0,Yes,Yes,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,The service works well but the price feels high; no major issues this month
+CUST-000832,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000833,Male,1,No,No,72,Yes,Yes,No,Two year,No,Digital wallet,39.25,1550.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000834,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000835,Male,0,Yes,Yes,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000836,Female,0,No,Yes,21,No,No phone service,No,Two year,Yes,Electronic check,30.00,451.50,No,The service works well but the price feels high; no major issues this month
+CUST-000837,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000838,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000839,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000840,Female,1,Yes,Yes,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000841,Male,1,Yes,Yes,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000842,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000843,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000844,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000845,Male,0,No,Yes,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000846,Female,0,Yes,Yes,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,The service works well but the price feels high; no major issues this month
+CUST-000847,Male,0,Yes,No,26,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,2087.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000848,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000849,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000850,Female,0,Yes,Yes,47,Yes,No,Fiber optic,One year,Yes,Digital wallet,110.00,3765.00,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000851,Male,0,No,Yes,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,The service works well but the price feels high; no major issues this month
+CUST-000852,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000853,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000854,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000855,Male,0,Yes,Yes,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000856,Female,1,Yes,Yes,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000857,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000858,Female,0,Yes,No,31,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,1462.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000859,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000860,Female,0,No,Yes,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000861,Male,0,Yes,Yes,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,The service works well but the price feels high; no major issues this month
+CUST-000862,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000863,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000864,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000865,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000866,Female,0,No,Yes,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,The service works well but the price feels high; no major issues this month
+CUST-000867,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Digital wallet,74.75,1041.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-000868,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000869,Male,0,No,No,36,No,No phone service,No,Two year,No,Mailed check,32.25,776.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000870,Female,0,Yes,Yes,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000871,Male,0,Yes,Yes,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,The service works well but the price feels high; no major issues this month
+CUST-000872,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000873,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000874,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000875,Male,0,No,Yes,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000876,Female,0,Yes,Yes,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,The service works well but the price feels high; no major issues this month
+CUST-000877,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000878,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000879,Male,0,Yes,No,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000880,Female,1,Yes,Yes,41,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,3280.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000881,Male,1,No,Yes,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,The service works well but the price feels high; no major issues this month
+CUST-000882,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000883,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000884,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Digital wallet,37.00,1483.50,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-000885,Male,0,Yes,Yes,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000886,Female,0,Yes,Yes,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,The service works well but the price feels high; no major issues this month
+CUST-000887,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000888,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000889,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000890,Female,0,No,Yes,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000891,Male,0,Yes,Yes,46,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,2169.50,No,The service works well but the price feels high; no major issues this month
+CUST-000892,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000893,Male,0,No,No,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000894,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000895,Male,0,Yes,Yes,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000896,Female,1,No,Yes,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,The service works well but the price feels high; no major issues this month
+CUST-000897,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000898,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000899,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000900,Female,0,Yes,Yes,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000901,Male,0,Yes,Yes,44,Yes,Yes,Fiber optic,One year,No,Digital wallet,116.25,3522.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000902,Female,0,No,No,51,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,1101.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000903,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000904,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000905,Male,1,No,Yes,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000906,Female,0,Yes,Yes,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,The service works well but the price feels high; no major issues this month
+CUST-000907,Male,0,Yes,No,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000908,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000909,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000910,Female,0,Yes,Yes,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000911,Male,0,No,Yes,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,The service works well but the price feels high; no major issues this month
+CUST-000912,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000913,Male,1,Yes,No,56,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,4482.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000914,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000915,Male,0,Yes,Yes,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000916,Female,0,Yes,Yes,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,The service works well but the price feels high; no major issues this month
+CUST-000917,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000918,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Digital wallet,72.50,898.00,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-000919,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000920,Female,1,No,Yes,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000921,Male,1,Yes,Yes,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000922,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000923,Male,0,No,No,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000924,Female,0,Yes,No,61,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,2867.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000925,Male,0,Yes,Yes,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000926,Female,0,No,Yes,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,The service works well but the price feels high; no major issues this month
+CUST-000927,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000928,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000929,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000930,Female,0,Yes,Yes,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000931,Male,0,Yes,Yes,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,The service works well but the price feels high; no major issues this month
+CUST-000932,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000933,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000934,Female,0,Yes,No,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000935,Male,0,No,Yes,66,No,No phone service,No,Two year,No,Digital wallet,32.25,1426.50,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-000936,Female,1,Yes,Yes,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000937,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000938,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000939,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000940,Female,0,Yes,Yes,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000941,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,The service works well but the price feels high; no major issues this month
+CUST-000942,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000943,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000944,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000945,Male,1,Yes,Yes,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000946,Female,0,Yes,Yes,71,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,5685.00,No,The service works well but the price feels high; no major issues this month
+CUST-000947,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000948,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000949,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000950,Female,0,No,Yes,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000951,Male,0,Yes,Yes,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,The service works well but the price feels high; no major issues this month
+CUST-000952,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Digital wallet,118.50,3280.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-000953,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000954,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000955,Male,0,Yes,Yes,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000956,Female,0,No,Yes,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,The service works well but the price feels high; no major issues this month
+CUST-000957,Male,0,Yes,No,4,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,190.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000958,Female,0,Yes,No,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000959,Male,0,No,No,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000960,Female,1,Yes,Yes,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000961,Male,1,Yes,Yes,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000962,Female,0,No,No,39,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,843.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000963,Male,0,Yes,No,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000964,Female,0,Yes,No,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000965,Male,0,No,Yes,60,Yes,Yes,No,Two year,No,Mailed check,39.25,1292.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000966,Female,0,Yes,Yes,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,The service works well but the price feels high; no major issues this month
+CUST-000967,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000968,Female,1,No,No,9,No,No phone service,No,Two year,Yes,Electronic check,30.00,193.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000969,Male,1,Yes,No,16,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,83.25,754.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000970,Female,0,Yes,Yes,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000971,Male,0,No,Yes,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,The service works well but the price feels high; no major issues this month
+CUST-000972,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000973,Male,0,Yes,No,44,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,3522.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000974,Female,0,No,No,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000975,Male,0,Yes,Yes,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000976,Female,1,Yes,Yes,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-000977,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000978,Female,0,Yes,No,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000979,Male,0,Yes,No,14,No,No phone service,Fiber optic,One year,No,Credit card (automatic),109.25,1127.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000980,Female,0,No,Yes,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000981,Male,0,Yes,Yes,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,The service works well but the price feels high; no major issues this month
+CUST-000982,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,2805.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000983,Male,0,No,No,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000984,Female,1,Yes,No,49,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2303.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-000985,Male,1,Yes,Yes,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-000986,Female,0,No,Yes,63,Yes,No,No,Two year,Yes,Digital wallet,28.50,1359.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-000987,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000988,Female,0,Yes,No,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-000989,Male,0,No,No,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000990,Female,0,Yes,Yes,19,No,No phone service,DSL,Month-to-month,Yes,Bank transfer (automatic),74.00,898.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000991,Male,0,Yes,Yes,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,The service works well but the price feels high; no major issues this month
+CUST-000992,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000993,Male,1,Yes,No,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-000994,Female,0,Yes,No,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-000995,Male,0,No,Yes,54,Yes,No,No,Two year,No,Credit card (automatic),30.75,1168.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-000996,Female,0,Yes,Yes,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,The service works well but the price feels high; no major issues this month
+CUST-000997,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-000998,Female,0,No,No,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-000999,Male,0,Yes,No,10,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,477.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001000,Female,1,Yes,Yes,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-001001,Male,1,No,Yes,24,No,No phone service,No,Two year,No,Mailed check,32.25,518.50,No,The service works well but the price feels high; no major issues this month
+CUST-001002,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001003,Male,0,Yes,No,38,Yes,No,Fiber optic,One year,No,Digital wallet,107.75,3047.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-001004,Female,0,No,No,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001005,Male,0,Yes,Yes,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001006,Female,0,Yes,Yes,59,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,4725.00,No,The service works well but the price feels high; no major issues this month
+CUST-001007,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001008,Female,1,Yes,No,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-001009,Male,1,Yes,No,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-001010,Female,0,No,Yes,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001011,Male,0,Yes,Yes,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,The service works well but the price feels high; no major issues this month
+CUST-001012,Female,0,Yes,No,29,No,No phone service,Fiber optic,One year,Yes,Electronic check,111.50,2320.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001013,Male,0,No,No,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001014,Female,0,Yes,No,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001015,Male,0,Yes,Yes,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001016,Female,1,No,Yes,57,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1225.50,No,The service works well but the price feels high; no major issues this month
+CUST-001017,Male,1,Yes,No,64,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,3010.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-001018,Female,0,Yes,No,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-001019,Male,0,No,No,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001020,Female,0,Yes,Yes,13,Yes,Yes,DSL,Month-to-month,Yes,Digital wallet,81.00,611.00,No,Support was responsive and the package feels fair; new payment option is convenient
+CUST-001021,Male,0,Yes,Yes,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The service works well but the price feels high; no major issues this month
+CUST-001022,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001023,Male,0,Yes,No,34,No,No phone service,DSL,Month-to-month,Yes,Credit card (automatic),76.25,1605.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001024,Female,1,Yes,No,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-001025,Male,1,No,Yes,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001026,Female,0,Yes,Yes,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,The service works well but the price feels high; no major issues this month
+CUST-001027,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001028,Female,0,No,No,69,Yes,Yes,No,Two year,Yes,Electronic check,37.00,1483.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001029,Male,0,Yes,No,4,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,190.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001030,Female,0,Yes,Yes,11,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,885.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001031,Male,0,No,Yes,18,Yes,No,No,Two year,No,Credit card (automatic),30.75,394.50,No,The service works well but the price feels high; no major issues this month
+CUST-001032,Female,1,Yes,No,25,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1175.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-001033,Male,1,Yes,No,32,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,2562.50,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-001034,Female,0,No,No,39,No,No phone service,No,Two year,Yes,Bank transfer (automatic),30.00,843.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001035,Male,0,Yes,Yes,46,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2169.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001036,Female,0,Yes,Yes,53,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,4240.00,No,The service works well but the price feels high; no major issues this month
+CUST-001037,Male,0,No,No,60,Yes,Yes,No,Two year,No,Digital wallet,39.25,1292.50,No,Setup was easy and the app is straightforward; new payment option is convenient
+CUST-001038,Female,0,Yes,No,67,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,3154.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-001039,Male,0,Yes,No,2,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,167.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001040,Female,1,No,Yes,9,Yes,Yes,No,Two year,Yes,Electronic check,37.00,193.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001041,Male,1,Yes,Yes,16,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,754.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-001042,Female,0,Yes,No,23,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,1845.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001043,Male,0,No,No,30,Yes,No,No,Two year,No,Credit card (automatic),30.75,652.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001044,Female,0,Yes,No,37,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,1739.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001045,Male,0,Yes,Yes,44,No,No phone service,Fiber optic,One year,No,Mailed check,109.25,3522.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001046,Female,0,No,Yes,51,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1101.50,No,The service works well but the price feels high; no major issues this month
+CUST-001047,Male,0,Yes,No,58,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,2733.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001048,Female,1,Yes,No,65,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,5200.00,Yes,The connection is stable and billing is clear; likely to cancel without a better offer
+CUST-001049,Male,1,No,No,72,Yes,Yes,No,Two year,No,Mailed check,39.25,1550.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001050,Female,0,Yes,Yes,7,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,334.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001051,Male,0,Yes,Yes,14,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,1127.50,No,The service works well but the price feels high; no major issues this month
+CUST-001052,Female,0,No,No,21,Yes,Yes,No,Two year,Yes,Electronic check,37.00,451.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001053,Male,0,Yes,No,28,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1318.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001054,Female,0,Yes,No,35,Yes,No,Fiber optic,One year,Yes,Digital wallet,110.00,2805.00,No,I would keep the plan if the monthly fee was lower; new payment option is convenient
+CUST-001055,Male,0,No,Yes,42,Yes,No,No,Two year,No,Credit card (automatic),30.75,910.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001056,Female,1,Yes,Yes,49,No,No phone service,DSL,Month-to-month,Yes,Electronic check,74.00,2303.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-001057,Male,1,Yes,No,56,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,4482.50,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-001058,Female,0,No,No,63,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,1359.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001059,Male,0,Yes,No,70,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,3297.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001060,Female,0,Yes,Yes,5,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,400.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001061,Male,0,No,Yes,12,Yes,Yes,No,Two year,No,Mailed check,39.25,260.50,No,The service works well but the price feels high; no major issues this month
+CUST-001062,Female,0,Yes,No,19,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,898.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001063,Male,0,Yes,No,26,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,2087.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001064,Female,1,No,No,33,Yes,Yes,No,Two year,Yes,Electronic check,37.00,709.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001065,Male,1,Yes,Yes,40,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,1882.50,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-001066,Female,0,Yes,Yes,47,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,3765.00,No,The service works well but the price feels high; no major issues this month
+CUST-001067,Male,0,No,No,54,No,No phone service,No,Two year,No,Credit card (automatic),32.25,1168.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001068,Female,0,Yes,No,61,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,2867.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-001069,Male,0,Yes,No,68,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,5442.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001070,Female,0,No,Yes,3,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,69.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001071,Male,0,Yes,Yes,10,Yes,No,DSL,Month-to-month,Yes,Digital wallet,74.75,477.50,No,The service works well but the price feels high; new payment option is convenient
+CUST-001072,Female,1,Yes,No,17,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,1360.00,Yes,Setup was easy and the app is straightforward; likely to cancel without a better offer
+CUST-001073,Male,1,No,No,24,Yes,Yes,No,Two year,No,Mailed check,39.25,518.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001074,Female,0,Yes,No,31,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,1462.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001075,Male,0,Yes,Yes,38,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,3047.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001076,Female,0,No,Yes,45,Yes,Yes,No,Two year,Yes,Electronic check,37.00,967.50,No,The service works well but the price feels high; no major issues this month
+CUST-001077,Male,0,Yes,No,52,Yes,Yes,DSL,Month-to-month,Yes,Mailed check,83.25,2446.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001078,Female,0,Yes,No,59,No,No phone service,Fiber optic,One year,Yes,Bank transfer (automatic),111.50,4725.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-001079,Male,0,No,No,66,Yes,No,No,Two year,No,Credit card (automatic),30.75,1426.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001080,Female,1,Yes,Yes,1,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,47.00,Yes,Support was responsive and the package feels fair; likely to cancel without a better offer
+CUST-001081,Male,1,Yes,Yes,8,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,642.50,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-001082,Female,0,No,No,15,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,327.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001083,Male,0,Yes,No,22,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1041.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001084,Female,0,Yes,No,29,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,2320.00,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001085,Male,0,No,Yes,36,Yes,Yes,No,Two year,No,Mailed check,39.25,776.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001086,Female,0,Yes,Yes,43,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2026.00,No,The service works well but the price feels high; no major issues this month
+CUST-001087,Male,0,Yes,No,50,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4007.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001088,Female,1,No,No,57,Yes,Yes,No,Two year,Yes,Digital wallet,37.00,1225.50,No,The connection is stable and billing is clear; new payment option is convenient
+CUST-001089,Male,1,Yes,No,64,No,No phone service,DSL,Month-to-month,Yes,Mailed check,76.25,3010.50,Yes,I would keep the plan if the monthly fee was lower; likely to cancel without a better offer
+CUST-001090,Female,0,Yes,Yes,71,Yes,No,Fiber optic,One year,Yes,Bank transfer (automatic),110.00,5685.00,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001091,Male,0,No,Yes,6,Yes,No,No,Two year,No,Credit card (automatic),30.75,136.50,No,The service works well but the price feels high; no major issues this month
+CUST-001092,Female,0,Yes,No,13,Yes,Yes,DSL,Month-to-month,Yes,Electronic check,81.00,611.00,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001093,Male,0,Yes,No,20,Yes,Yes,Fiber optic,One year,No,Mailed check,116.25,1602.50,No,The connection is stable and billing is clear; no major issues this month
+CUST-001094,Female,0,No,No,27,Yes,No,No,Two year,Yes,Bank transfer (automatic),28.50,585.50,No,I would keep the plan if the monthly fee was lower; no major issues this month
+CUST-001095,Male,0,Yes,Yes,34,Yes,No,DSL,Month-to-month,Yes,Credit card (automatic),74.75,1605.50,No,Support was responsive and the package feels fair; no major issues this month
+CUST-001096,Female,1,Yes,Yes,41,Yes,Yes,Fiber optic,One year,Yes,Electronic check,118.50,3280.00,Yes,The service works well but the price feels high; likely to cancel without a better offer
+CUST-001097,Male,1,No,No,48,Yes,Yes,No,Two year,No,Mailed check,39.25,1034.50,No,Setup was easy and the app is straightforward; no major issues this month
+CUST-001098,Female,0,Yes,No,55,Yes,No,DSL,Month-to-month,Yes,Bank transfer (automatic),72.50,2590.00,No,The connection is stable and billing is clear; no major issues this month
+CUST-001099,Male,0,Yes,No,62,Yes,No,Fiber optic,One year,No,Credit card (automatic),107.75,4967.50,No,I would keep the plan if the monthly fee was lower; no major issues this month

@@ -22,7 +22,7 @@ def test_compare_datasets_on_project_examples_detects_major_drift() -> None:
     assert any(finding.code == "removed_column" for finding in result.findings)
     assert any(finding.code == "numeric_drift" for finding in result.findings)
     assert any(finding.code == "category_drift" for finding in result.findings)
-    assert any(finding.code == "unique_ratio_change" for finding in result.findings)
+    assert any(finding.code == "row_count_change" for finding in result.findings)
 
 
 def test_compare_and_write_creates_report_files(tmp_path: Path) -> None:
