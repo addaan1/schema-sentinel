@@ -1,0 +1,84 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Schema Sentinel report preview</title>
+  <desc id="desc">A preview mockup of the HTML report with hero, cards, and findings sections.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EAF2FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="920" rx="40" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="80" y="66" width="1440" height="220" rx="32" fill="white"/>
+  </g>
+  <text x="126" y="134" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Schema Sentinel Report</text>
+  <text x="126" y="176" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">old.csv → new.csv</text>
+  <rect x="126" y="202" width="120" height="34" rx="17" fill="#FEE2E2"/>
+  <text x="186" y="225" text-anchor="middle" fill="#DC2626" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">CRITICAL</text>
+  <text x="1260" y="140" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-3">84</text>
+  <text x="1260" y="178" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Stability score / 100</text>
+  <text x="1260" y="220" fill="#2563EB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">4 findings across 7 shared columns</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="322" width="1440" height="180" rx="32" fill="white"/>
+  </g>
+  <text x="128" y="366" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">Summary cards</text>
+  <g>
+    <rect x="128" y="392" width="200" height="82" rx="22" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="346" y="392" width="200" height="82" rx="22" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="564" y="392" width="200" height="82" rx="22" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="782" y="392" width="200" height="82" rx="22" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="1000" y="392" width="200" height="82" rx="22" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="1218" y="392" width="200" height="82" rx="22" fill="#F8FAFC" stroke="#E2E8F0"/>
+  </g>
+  <g fill="#334155" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="150" y="424" font-size="13" font-weight="800">Critical</text>
+    <text x="150" y="456" font-size="28" font-weight="800" fill="#DC2626">1</text>
+    <text x="368" y="424" font-size="13" font-weight="800">High</text>
+    <text x="368" y="456" font-size="28" font-weight="800" fill="#EA580C">2</text>
+    <text x="586" y="424" font-size="13" font-weight="800">Medium</text>
+    <text x="586" y="456" font-size="28" font-weight="800" fill="#D97706">1</text>
+    <text x="804" y="424" font-size="13" font-weight="800">Low</text>
+    <text x="804" y="456" font-size="28" font-weight="800" fill="#0891B2">0</text>
+    <text x="1022" y="424" font-size="13" font-weight="800">Added</text>
+    <text x="1022" y="456" font-size="28" font-weight="800">1</text>
+    <text x="1240" y="424" font-size="13" font-weight="800">Removed</text>
+    <text x="1240" y="456" font-size="28" font-weight="800">1</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="534" width="920" height="320" rx="32" fill="white"/>
+  </g>
+  <text x="128" y="580" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">Findings by severity</text>
+  <rect x="128" y="606" width="110" height="32" rx="16" fill="#FEE2E2"/>
+  <text x="183" y="628" text-anchor="middle" fill="#DC2626" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">CRITICAL</text>
+  <text x="258" y="628" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Removed column `active`</text>
+  <rect x="128" y="652" width="110" height="32" rx="16" fill="#FFEDD5"/>
+  <text x="183" y="674" text-anchor="middle" fill="#EA580C" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">HIGH</text>
+  <text x="258" y="674" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Numeric drift detected in `revenue`</text>
+  <rect x="128" y="698" width="110" height="32" rx="16" fill="#FEF3C7"/>
+  <text x="183" y="720" text-anchor="middle" fill="#D97706" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">MEDIUM</text>
+  <text x="258" y="720" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Category drift detected in `plan`</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1032" y="534" width="488" height="320" rx="32" fill="white"/>
+  </g>
+  <text x="1080" y="580" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">Column diff</text>
+  <rect x="1080" y="606" width="392" height="42" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="1080" y="656" width="392" height="42" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="1080" y="706" width="392" height="42" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <g fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">
+    <text x="1100" y="633">revenue</text>
+    <text x="1100" y="683">plan</text>
+    <text x="1100" y="733">score</text>
+  </g>
+  <g fill="#2563EB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">
+    <text x="1280" y="633">numeric → numeric</text>
+    <text x="1280" y="683">categorical drift</text>
+    <text x="1280" y="733">null spike</text>
+  </g>
+</svg>
+

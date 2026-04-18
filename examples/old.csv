@@ -1,0 +1,10 @@
+id,name,region,plan,revenue,score,active,status
+1,Ana,West,free,100,0.82,true,stable
+2,Budi,East,pro,120,0.67,true,stable
+3,Cici,West,free,95,0.73,false,stable
+4,Dedi,North,pro,140,0.91,true,stable
+5,Eka,South,enterprise,220,0.88,true,stable
+6,Fajar,West,pro,130,0.69,false,stable
+7,Gita,East,free,110,0.77,true,stable
+8,Hadi,North,pro,150,0.83,true,stable
+
